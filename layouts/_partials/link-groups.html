@@ -6,7 +6,7 @@
     {{- $ext := hasPrefix .url "http" }}
     <li>
       {{- if .url }}
-      <a href="{{ .url | relURL }}" {{ if $ext }}target="_blank" rel="noopener"{{ end }} class="group flex justify-between items-center gap-5 py-4 hover:bg-[#f5f8fb] -mx-3 px-3 rounded-lg">
+      <a href="{{ partial "url.html" .url }}" {{ if $ext }}target="_blank" rel="noopener"{{ end }} class="group flex justify-between items-center gap-5 py-4 hover:bg-[#f5f8fb] -mx-3 px-3 rounded-lg">
         <span><span class="block font-head font-semibold text-lg text-navy">{{ .title }}</span><span class="block text-[15px] text-muted">{{ .description }}</span></span>
         <span class="flex-none text-sm font-semibold text-gold">{{ if strings.Contains .url "drive.google" }}Google Drive ↗{{ else if $ext }}Open ↗{{ else }}Open →{{ end }}</span>
       </a>

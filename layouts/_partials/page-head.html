@@ -1,7 +1,7 @@
 {{- /* Page title block. With a `hero_image` it's a navy photo band; otherwise a plain heading with an optional breadcrumb from `parent`. */ -}}
 {{- with .Params.hero_image }}
 <section class="relative bg-navy overflow-hidden">
-  <img src="{{ . | relURL }}" alt="" class="absolute inset-0 size-full object-cover opacity-35">
+  <img src="{{ partial "url.html" . }}" alt="" class="absolute inset-0 size-full object-cover opacity-35">
   <div class="absolute inset-0 bg-linear-to-r from-navy from-25% to-navy/30"></div>
   <div class="relative max-w-[1100px] mx-auto px-5 md:px-16 py-10 md:py-16">
     {{ with $.Params.eyebrow }}<div class="font-mono text-xs tracking-[0.2em] uppercase text-gold">{{ . }}</div>{{ end }}

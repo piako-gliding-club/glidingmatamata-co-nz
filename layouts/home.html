@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ with .Params }}
 <section class="relative overflow-hidden bg-deep">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ .hero_image | relURL }}')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ partial "url.html" .hero_image }}')"></div>
   <div class="absolute inset-0 bg-linear-to-b from-[rgba(9,20,33,0.30)] via-[rgba(9,20,33,0.55)] to-[rgba(9,20,33,0.82)]"></div>
   <svg viewBox="0 0 1200 600" preserveAspectRatio="none" class="absolute inset-0 size-full opacity-50" aria-hidden="true">
     <path d="M -40 480 C 300 470, 520 300, 780 220 S 1180 60, 1320 20" fill="none" stroke="#d5a02c" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" opacity="0.7"/>
@@ -10,8 +10,8 @@
     <h1 class="font-head font-bold text-[clamp(48px,8vw,104px)] leading-[0.95] tracking-[-0.03em] text-white max-w-[14ch] text-balance">{{ .hero_title }}</h1>
     <p class="mt-6 text-[clamp(18px,2.2vw,24px)] leading-normal text-white/85 max-w-[30ch]">{{ .hero_text }}</p>
     <div class="flex flex-wrap gap-3.5 mt-10">
-      <a href="{{ "/trial-flights/" | relURL }}" class="btn-gold text-[17px] !px-[30px] !py-4">Book a trial flight →</a>
-      <a href="{{ "/training-journey/" | relURL }}" class="font-head font-semibold text-[17px] px-[30px] py-4 rounded-xl border-[1.5px] border-white/50 text-white hover:bg-white/10">The training journey</a>
+      <a href="{{ partial "url.html" "/trial-flights/" }}" class="btn-gold text-[17px] !px-[30px] !py-4">Book a trial flight →</a>
+      <a href="{{ partial "url.html" "/training-journey/" }}" class="font-head font-semibold text-[17px] px-[30px] py-4 rounded-xl border-[1.5px] border-white/50 text-white hover:bg-white/10">The training journey</a>
     </div>
   </div>
 </section>
@@ -22,8 +22,8 @@
     <h2 class="font-head font-bold text-[clamp(28px,4vw,44px)] leading-tight tracking-[-0.02em] text-navy mb-11">Find your path</h2>
     <div class="grid sm:grid-cols-2 gap-[18px]">
       {{- range .paths }}
-      <a href="{{ .url | relURL }}" class="card card-hover flex overflow-hidden min-h-[190px]">
-        <div class="flex-none w-[150px] bg-cover bg-center" style="background-image: url('{{ .image | relURL }}')"></div>
+      <a href="{{ partial "url.html" .url }}" class="card card-hover flex overflow-hidden min-h-[190px]">
+        <div class="flex-none w-[150px] bg-cover bg-center" style="background-image: url('{{ partial "url.html" .image }}')"></div>
         <div class="flex-1 px-7 py-[26px] flex flex-col">
           <div class="font-head font-semibold text-2xl text-navy mb-2.5">{{ .title }}</div>
           <p class="text-[15px] text-muted leading-normal flex-1">{{ .text }}</p>
@@ -40,7 +40,7 @@
     <div class="font-mono text-xs tracking-[0.2em] uppercase text-gold">Flying conditions</div>
     <div class="flex flex-wrap gap-3">
       {{- range .conditions }}
-      <a href="{{ .url | relURL }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="text-sm px-[18px] py-2.5 rounded-full border border-white/20 hover:border-gold">{{ .text }}</a>
+      <a href="{{ partial "url.html" .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="text-sm px-[18px] py-2.5 rounded-full border border-white/20 hover:border-gold">{{ .text }}</a>
       {{- end }}
     </div>
   </div>

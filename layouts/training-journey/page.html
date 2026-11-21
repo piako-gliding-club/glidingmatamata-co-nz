@@ -3,7 +3,7 @@
 {{ with .Params }}
 <div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
   <section class="mt-10 md:mt-14">
-    <img src="{{ .journey_image | relURL }}" alt="The soaring journey — stages from trial flight through to competition, from Gliding New Zealand" class="w-full rounded-2xl bg-white">
+    <img src="{{ partial "url.html" .journey_image }}" alt="The soaring journey — stages from trial flight through to competition, from Gliding New Zealand" class="w-full rounded-2xl bg-white">
     <p class="mt-6 text-body max-w-[70ch]">{{ .journey_text }}</p>
   </section>
 
@@ -31,7 +31,7 @@
     </div>
     <div class="flex flex-wrap gap-3">
       <a href="{{ .syllabus_url }}" target="_blank" rel="noopener" class="font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-6 py-3.5 hover:bg-navy hover:text-white">View the syllabus ↗</a>
-      <a href="{{ "/trial-flights/" | relURL }}" class="btn-gold">Start with a trial flight →</a>
+      <a href="{{ partial "url.html" "/trial-flights/" }}" class="btn-gold">Start with a trial flight →</a>
     </div>
   </section>
 </div>

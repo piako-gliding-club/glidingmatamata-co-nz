@@ -10,7 +10,7 @@
     <div class="grid md:grid-cols-2 gap-x-7 gap-y-10">
       {{- range where $planes "Params.category" $cat }}
       <a href="{{ .RelPermalink }}" class="group flex flex-col gap-2.5">
-        <img src="{{ .Params.photo | relURL }}" alt="{{ .Title }}" class="w-full aspect-[4/3] object-cover rounded-[14px] bg-card-line">
+        <img src="{{ partial "url.html" .Params.photo }}" alt="{{ .Title }}" class="w-full aspect-[4/3] object-cover rounded-[14px] bg-card-line">
         <div class="flex items-baseline gap-3 mt-1.5">
           {{ with .Params.registration }}<span class="font-mono font-semibold text-sm tracking-[0.08em] text-white bg-navy rounded-md px-2">{{ . }}</span>{{ end }}
           <span class="font-head font-bold text-[22px] text-navy">{{ .Params.model }}</span>

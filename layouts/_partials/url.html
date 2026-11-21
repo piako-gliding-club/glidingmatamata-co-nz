@@ -1,0 +1,2 @@
+{{- /* relURL leaves "/x" untouched, which breaks under a sub-path baseURL like user.github.io/repo/. */ -}}
+{{- return (strings.TrimPrefix "/" . | relURL) -}}

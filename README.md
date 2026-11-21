@@ -34,4 +34,4 @@ Where things live:
 
 Pushes to `main` deploy via `.github/workflows/deploy.yml`. In the repo's **Settings → Pages**, set the source to **GitHub Actions**.
 
-Links written in Markdown (e.g. `[webcams](/weather/)`) assume the site is served from the domain root, so use a custom domain rather than `<user>.github.io/<repo>/`.
+Works at `<user>.github.io/<repo>/` or on a custom domain. Write internal links from the site root (`/weather/`, `/images/x.jpg`); the `url.html` partial and the Markdown render hooks in `layouts/_markup/` add the base path. Use `partial "url.html"` rather than `relURL` in templates — `relURL` leaves `/x` paths alone.

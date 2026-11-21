@@ -1,8 +1,8 @@
 {{- $page := . -}}
 {{- $book := hugo.Data.settings.booking_url -}}
 <header class="sticky top-0 z-50 flex items-center gap-4 px-5 md:px-16 py-3.5 bg-page/90 backdrop-blur border-b border-line">
-  <a href="{{ "/" | relURL }}" class="flex items-center gap-3.5 mr-auto" aria-label="Piako Gliding Club — home">
-    <img src="{{ "images/logo.svg" | relURL }}" alt="" width="46" height="47" class="size-9 sm:size-[46px]">
+  <a href="{{ partial "url.html" "/" }}" class="flex items-center gap-3.5 mr-auto" aria-label="Piako Gliding Club — home">
+    <img src="{{ partial "url.html" "images/logo.svg" }}" alt="" width="46" height="47" class="size-9 sm:size-[46px]">
     <span class="leading-tight">
       <span class="block font-logo font-bold text-[15px] sm:text-[19px] tracking-[0.5px] text-navy whitespace-nowrap">PIAKO GLIDING CLUB</span>
       <span class="block font-logo font-medium text-[9.5px] tracking-[2.5px] text-label mt-0.5">MATAMATA · NEW ZEALAND</span>

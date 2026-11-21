@@ -13,7 +13,7 @@
       </span>
       <span class="font-head font-semibold">{{ .title }}</span>
       <span class="text-sm text-white/75 flex-[1_1_260px]">{{ .details }}</span>
-      {{- if .link_url }}<a href="{{ .link_url }}" class="text-sm font-semibold text-gold whitespace-nowrap hover:underline">{{ .link_text | default "More" }} →</a>{{ end }}
+      {{- if .link_url }}<a href="{{ partial "url.html" .link_url }}" class="text-sm font-semibold text-gold whitespace-nowrap hover:underline">{{ .link_text | default "More" }} →</a>{{ end }}
     </li>
     {{- end }}
   </ul>

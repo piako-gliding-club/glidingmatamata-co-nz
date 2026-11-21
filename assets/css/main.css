@@ -24,6 +24,7 @@
   ::selection { @apply bg-gold text-deep; }
   summary { list-style: none; }
   summary::-webkit-details-marker { display: none; }
+  @media (width < 64rem) { body:has(#mobile-menu[open]) { overflow: hidden; } }
 }
 
 @utility eyebrow { @apply font-mono text-xs tracking-[0.2em] uppercase text-label; }

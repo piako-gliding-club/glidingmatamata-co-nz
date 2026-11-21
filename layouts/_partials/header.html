@@ -30,16 +30,36 @@
     <a href="{{ $book }}" target="_blank" rel="noopener" class="btn-gold ml-1.5 !px-5 !py-2.5 text-sm">Book a flight ↗</a>
   </nav>
 
-  <details class="lg:hidden relative">
-    <summary class="btn-gold !px-[18px] !py-[11px] text-sm cursor-pointer">Menu</summary>
-    <div class="absolute right-0 top-[calc(100%+10px)] max-h-[calc(100vh-100px)] overflow-y-auto flex flex-col gap-0.5 min-w-[220px] p-2 bg-white border border-line rounded-[14px] shadow-[0_22px_50px_rgba(18,35,59,0.18)]">
+  <details id="mobile-menu" class="lg:hidden group">
+    <summary class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl border-[1.5px] border-navy text-navy font-head font-semibold text-sm cursor-pointer select-none">
+      <svg class="size-5 group-open:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="size-5 hidden group-open:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span class="group-open:hidden">Menu</span><span class="hidden group-open:inline">Close</span>
+    </summary>
+    {{- /* Positioned against the header: its backdrop-filter makes position:fixed relative to it anyway. */}}
+    <nav class="absolute left-0 right-0 top-full h-[calc(100dvh-100%)] overflow-y-auto bg-page border-t border-line px-5 pt-3 pb-10 flex flex-col" aria-label="Main">
       {{- range site.Menus.main }}
-        <a href="{{ .URL }}" class="px-3.5 py-3 rounded-lg font-medium text-navy hover:bg-[#e6ecf3]">{{ .Name }}</a>
-        {{- range .Children }}
-        <a href="{{ .URL }}" {{ if hasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }} class="pl-[30px] pr-3.5 py-2 rounded-lg text-sm text-muted hover:bg-[#e6ecf3]">{{ .Name }}</a>
+        {{- if .HasChildren }}
+        <details name="mobile-section" class="group/sec border-b border-line">
+          <summary class="flex items-center justify-between py-4 font-head font-semibold text-xl text-navy cursor-pointer select-none">
+            {{ .Name }}
+            <svg class="size-5 text-label transition-transform group-open/sec:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="flex flex-col pb-3">
+            {{- $url := .URL }}{{ $dup := false }}{{ range .Children }}{{ if eq .URL $url }}{{ $dup = true }}{{ end }}{{ end }}
+            {{- if not $dup }}
+            <a href="{{ .URL }}" class="py-2.5 pl-4 text-navy font-medium">{{ .Name }} overview</a>
+            {{- end }}
+            {{- range .Children }}
+            <a href="{{ .URL }}" {{ if hasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }} class="py-2.5 pl-4 text-navy font-medium">{{ .Name }}</a>
+            {{- end }}
+          </div>
+        </details>
+        {{- else }}
+        <a href="{{ .URL }}" class="py-4 border-b border-line font-head font-semibold text-xl text-navy">{{ .Name }}</a>
         {{- end }}
       {{- end }}
-      <a href="{{ $book }}" target="_blank" rel="noopener" class="btn-gold mt-1.5 text-center">Book a flight ↗</a>
-    </div>
+      <a href="{{ $book }}" target="_blank" rel="noopener" class="btn-gold mt-6 text-center">Book a flight ↗</a>
+    </nav>
   </details>
 </header>

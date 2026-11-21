@@ -1,0 +1,78 @@
+{{ define "main" }}
+{{ partial "page-head.html" . }}
+{{ with .Params }}
+{{- $h2 := "font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy" -}}
+<div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
+  <section class="mt-12 md:mt-16">
+    <h2 class="{{ $h2 }}">Flying charges</h2>
+    <p class="mt-2 text-body">{{ .flying_note }}</p>
+    <div class="mt-6 grid md:grid-cols-3 gap-[18px]">
+      {{- range .flying_charges }}
+      <div class="card p-6">
+        <div class="font-mono font-semibold text-2xl text-navy">{{ .price }}</div>
+        <div class="mt-2 font-head font-semibold text-lg text-navy">{{ .title }}</div>
+        <p class="mt-1 text-[15px] text-muted">{{ .text }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="mt-16 md:mt-20">
+    <h2 class="{{ $h2 }}">{{ .membership_title }}</h2>
+    <p class="mt-2 text-body max-w-[70ch]">{{ .membership_intro }}</p>
+    <div class="mt-6 card overflow-hidden text-[15px]">
+      <div class="hidden md:grid grid-cols-[2fr_1fr_1fr_1fr] bg-[#f5f8fb] text-label font-mono text-xs uppercase tracking-[0.1em]">
+        <div class="px-5 py-3">Fee class</div>
+        <div class="px-5 py-3 text-right">Full year<br><span class="normal-case tracking-normal">Jul–Jan</span></div>
+        <div class="px-5 py-3 text-right">Half year<br><span class="normal-case tracking-normal">Feb–Apr</span></div>
+        <div class="px-5 py-3 text-right">Quarter<br><span class="normal-case tracking-normal">May–Jun</span></div>
+      </div>
+      <div class="divide-y divide-[#e3e9f0]">
+        {{- range .membership }}
+        <div class="grid grid-cols-3 md:grid-cols-[2fr_1fr_1fr_1fr] gap-y-2 px-5 md:px-0 py-3.5 items-center">
+          <div class="col-span-3 md:col-span-1 md:px-5"><strong class="text-navy">{{ .title }}</strong><br><span class="text-sm text-muted">{{ .note }}</span></div>
+          {{- range slice (slice "Full year" .full_year) (slice "Half year" .half_year) (slice "Quarter" .quarter) }}
+          <div class="md:px-5 md:text-right font-mono text-navy"><span class="md:hidden block font-mono text-[11px] uppercase tracking-[0.1em] text-label">{{ index . 0 }}</span>{{ index . 1 }}</div>
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </div>
+    <p class="mt-4 text-sm text-muted max-w-[70ch]">{{ .membership_note }}</p>
+  </section>
+
+  <section class="mt-16 md:mt-20 grid md:grid-cols-2 gap-[18px]">
+    <div class="card p-7">
+      <h2 class="font-head font-semibold text-2xl text-navy">Unlimited Flying Scheme</h2>
+      <div class="mt-2 font-mono font-semibold text-navy">{{ .ufs_price }}</div>
+      <p class="mt-3 text-[15px] text-body">{{ .ufs_text }}</p>
+    </div>
+    <div class="card p-7">
+      <h2 class="font-head font-semibold text-2xl text-navy">Paying annual fees &amp; UFS</h2>
+      {{- range .paying }}
+      <h3 class="mt-4 eyebrow">{{ .title }}</h3>
+      <div class="mt-1 text-[15px] text-body prose-links [&_strong]:text-navy">{{ .text | markdownify }}</div>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="mt-16 md:mt-20">
+    <h2 class="{{ $h2 }}">Youth groups</h2>
+    <p class="mt-2 text-body max-w-[70ch] prose-links">{{ .youth_text | markdownify }}</p>
+    <div class="mt-6 card overflow-x-auto max-w-[720px]">
+      <table class="w-full text-left text-[15px]">
+        <thead class="bg-[#f5f8fb] text-label font-mono text-xs uppercase tracking-[0.1em]">
+          <tr><th class="px-5 py-3 font-medium">Launch</th><th class="px-5 py-3 font-medium text-right">Cost</th><th class="px-5 py-3 font-medium text-right">Approx. time</th></tr>
+        </thead>
+        <tbody class="divide-y divide-[#e3e9f0]">
+          {{- range .youth_rates }}
+          <tr><td class="px-5 py-3 text-navy font-semibold">{{ .launch }}</td><td class="px-5 py-3 text-right font-mono text-navy">{{ .cost }}</td><td class="px-5 py-3 text-right font-mono text-muted">{{ .time }}</td></tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-6 text-[15px] text-muted">{{ .other }}</p>
+  </section>
+</div>
+{{ end }}
+{{ end }}

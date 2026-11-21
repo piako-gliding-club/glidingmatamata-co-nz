@@ -25,33 +25,87 @@ disableKinds = ["taxonomy", "term", "rss", "sitemap"]
   weight = 10
 [[menus.main]]
   name = "About"
+  pageRef = "/about"
   identifier = "about"
-  pageRef = "/aircraft"
   weight = 20
 [[menus.main]]
   name = "Our aircraft"
-  parent = "about"
   pageRef = "/aircraft"
-  weight = 21
-[[menus.main]]
-  name = "Fly with us"
-  identifier = "fly"
-  pageRef = "/trial-flights"
+  parent = "about"
   weight = 30
 [[menus.main]]
-  name = "Trial flights"
-  parent = "fly"
+  name = "Fees & prices"
+  pageRef = "/fees"
+  parent = "about"
+  weight = 40
+[[menus.main]]
+  name = "Fly with us"
   pageRef = "/trial-flights"
-  weight = 31
+  identifier = "fly"
+  weight = 50
+[[menus.main]]
+  name = "Trial flights"
+  pageRef = "/trial-flights"
+  parent = "fly"
+  weight = 60
 [[menus.main]]
   name = "Gift vouchers"
-  parent = "fly"
   pageRef = "/gift-vouchers"
-  weight = 32
+  parent = "fly"
+  weight = 70
+[[menus.main]]
+  name = "The training journey"
+  pageRef = "/training-journey"
+  parent = "fly"
+  weight = 80
+[[menus.main]]
+  name = "Visiting pilots"
+  pageRef = "/visiting-pilots"
+  parent = "fly"
+  weight = 90
+[[menus.main]]
+  name = "Tow pilots"
+  pageRef = "/tow-pilots"
+  parent = "fly"
+  weight = 100
+[[menus.main]]
+  name = "Members"
+  pageRef = "/members"
+  identifier = "members"
+  weight = 110
+[[menus.main]]
+  name = "Forms and SoPs"
+  pageRef = "/members/forms-and-sops"
+  parent = "members"
+  weight = 120
+[[menus.main]]
+  name = "Committee & governance"
+  pageRef = "/members/committee"
+  parent = "members"
+  weight = 130
+[[menus.main]]
+  name = "Club resources"
+  pageRef = "/members/resources"
+  parent = "members"
+  weight = 140
+[[menus.main]]
+  name = "Roster & bookings ↗"
+  url = "https://glidingmatamata.co.nz/members/roster/"
+  parent = "members"
+  weight = 150
+[[menus.main]]
+  name = "Events ↗"
+  url = "https://piako.gliding.net.nz/events"
+  parent = "members"
+  weight = 160
 [[menus.main]]
   name = "Weather"
   pageRef = "/weather"
-  weight = 40
+  weight = 170
+[[menus.main]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 180
 
 [security.exec]
   allow = ['^node$', '^tailwindcss$', '^git$']

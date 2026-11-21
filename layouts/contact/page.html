@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{ partial "page-head.html" . }}
+{{ with .Params }}
+<div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
+  {{- range slice (dict "title" "Get help with" "people" .help) (dict "title" "Key contacts" "people" .key_contacts) }}
+  <section class="mt-12 md:mt-16">
+    <h2 class="eyebrow mb-5">{{ .title }}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
+      {{- range .people }}
+      <div class="card p-6 flex flex-col gap-1">
+        <div class="font-head font-semibold text-lg text-navy">{{ .role }}</div>
+        <div class="text-body">{{ .name }}</div>
+        {{ with .phone }}<a href="tel:{{ replace . " " "" }}" class="mt-2 font-mono text-sm text-navy hover:text-gold">{{ . }}</a>{{ end }}
+        {{ with .email }}<a href="mailto:{{ . }}" class="text-sm font-semibold text-navy underline underline-offset-4 break-words hover:text-gold">{{ . }}</a>{{ end }}
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <section class="mt-16 grid md:grid-cols-2 gap-[18px]">
+    <div class="card p-7">
+      <div class="eyebrow">Find us</div>
+      <h2 class="mt-2 font-head font-semibold text-2xl text-navy">Matamata Aerodrome</h2>
+      <p class="mt-3 text-body">{{ .address }}</p>
+      <a href="{{ .map_url }}" target="_blank" rel="noopener" class="btn-gold mt-6">Open in Google Maps ↗</a>
+    </div>
+    <div class="card p-7">
+      <div class="eyebrow">Write to us</div>
+      <p class="mt-2 text-body whitespace-pre-line [&::first-line]:font-head [&::first-line]:font-semibold [&::first-line]:text-2xl [&::first-line]:text-navy">{{ trim .postal "\n" }}</p>
+    </div>
+  </section>
+</div>
+{{ end }}
+{{ end }}

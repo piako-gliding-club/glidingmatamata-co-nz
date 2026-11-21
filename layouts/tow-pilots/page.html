@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ partial "page-head.html" . }}
+<div class="max-w-[1100px] mx-auto px-5 md:px-16 py-10 md:py-18">
+  {{ partial "rows.html" .Params.rows }}
+  <div class="mt-12 md:mt-18">{{ partial "cta.html" . }}</div>
+</div>
+{{ end }}

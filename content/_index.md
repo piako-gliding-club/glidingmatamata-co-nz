@@ -13,17 +13,17 @@ paths:
   - title: Interested in towing?
     text: Looking to build hours or for a fun way to stay current? Tow pilots are a vital part of our operations.
     link_text: Towplane info
-    url: "#"
+    url: /tow-pilots/
     image: /images/towplane.jpg
   - title: Visiting pilot?
     text: Learn about our facilities, fees, and operating procedures.
     link_text: Pilot info
-    url: "#"
+    url: /visiting-pilots/
     image: /images/windsock.jpg
   - title: Existing members
     text: Already flying with us? Head to the members' area for the roster, resources and club news.
     link_text: Members' area
-    url: "#"
+    url: /members/
     image: /images/members.jpg
 conditions:
   - text: Webcams & weather →

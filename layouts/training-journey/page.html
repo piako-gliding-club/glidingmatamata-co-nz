@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ partial "page-head.html" . }}
+{{ with .Params }}
+<div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
+  <section class="mt-10 md:mt-14">
+    <img src="{{ .journey_image | relURL }}" alt="The soaring journey — stages from trial flight through to competition, from Gliding New Zealand" class="w-full rounded-2xl bg-white">
+    <p class="mt-6 text-body max-w-[70ch]">{{ .journey_text }}</p>
+  </section>
+
+  <ol class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
+    {{- range $i, $s := .stages }}
+    <li class="card p-6">
+      <div class="flex items-center gap-3">
+        <span class="flex-none size-8 rounded-full bg-navy text-white font-mono text-sm grid place-items-center">{{ add $i 1 }}</span>
+        <h2 class="font-head font-semibold text-xl text-navy">{{ $s.title }}</h2>
+      </div>
+      <p class="mt-3 text-[15px] text-body">{{ $s.text }}</p>
+    </li>
+    {{- end }}
+  </ol>
+
+  <section class="mt-16 md:mt-20">
+    <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-8">How training works</h2>
+    {{ partial "rows.html" .how_it_works }}
+  </section>
+
+  <section class="mt-16 border-t border-line pt-7 flex flex-wrap gap-x-10 gap-y-5 items-center justify-between">
+    <div class="max-w-[60ch]">
+      <div class="eyebrow mb-2">Want the detail?</div>
+      <p class="text-body prose-links">{{ .detail | markdownify }}</p>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <a href="{{ .syllabus_url }}" target="_blank" rel="noopener" class="font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-6 py-3.5 hover:bg-navy hover:text-white">View the syllabus ↗</a>
+      <a href="{{ "/trial-flights/" | relURL }}" class="btn-gold">Start with a trial flight →</a>
+    </div>
+  </section>
+</div>
+{{ end }}
+{{ end }}

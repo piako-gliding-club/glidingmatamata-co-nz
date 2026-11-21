@@ -5,10 +5,12 @@ Static site built with [Hugo](https://gohugo.io) and Tailwind CSS, hosted on Git
 ## Editing (club members)
 
 1. Go to <https://app.pagescms.org>, sign in with GitHub, and open this repository.
-2. Choose what to edit from the sidebar: **Notices banner**, **Trial flight prices**, **Aircraft**, or one of the pages.
+2. Choose what to edit from the sidebar: **Notices banner**, **Trial flight prices**, **Aircraft**, **Members document pages**, or any page.
 3. Click **Save**. The live site updates in about a minute.
 
 Notices disappear by themselves the day after their "Show until" date.
+
+Members document links: paste the Google Drive sharing link into the link's URL field. Links left empty show "Link to come" instead of a broken link. Who can open a document is controlled by its Drive sharing settings — this site is public.
 
 ## Development
 
@@ -22,9 +24,9 @@ npm run build   # output in public/
 
 Where things live:
 
-- `content/` — pages (Markdown + front matter). Aircraft are one file each in `content/aircraft/`.
+- `content/` — pages (Markdown + front matter). Aircraft are one file each in `content/aircraft/`; members document pages are in `content/members/`.
 - `data/` — notices, trial flight prices, site settings.
-- `layouts/` — templates. A page at `content/<name>/index.md` uses `layouts/<name>/page.html`.
+- `layouts/` — templates. A page at `content/<name>/index.md` uses `layouts/<name>/page.html`. Shared pieces (header, notices, page heading, call-to-action band) are in `layouts/_partials/`.
 - `assets/css/main.css` — Tailwind entry point and design tokens.
 - `.pages.yml` — what the CMS lets editors change.
 

@@ -128,7 +128,7 @@ content:
       - { name: price_note, label: Note under prices, type: text }
       - { name: included, label: Included with every trial flight, type: string, list: true }
       - { name: fly_yourself, label: Fly yourself, type: text }
-      - { name: turn_up, label: Can I just turn up?, type: text }
+      - { name: turn_up, label: "Can I just turn up?", type: text }
       - { name: gift, label: Give it as a gift, type: text }
       - { name: gift_note, label: Gift note, type: text }
       - { name: booking_steps, label: How to book (steps), type: text, list: true }
@@ -197,3 +197,261 @@ content:
           - { name: title, type: string }
           - { name: text, type: string }
           - { name: url, type: string }
+
+  - name: about_page
+    label: About page
+    type: file
+    path: content/about/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: heading, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: eyebrow, type: string }
+      - { name: intro, type: text }
+      - { name: hero_image, label: Header photo, type: image }
+      - { name: mission, type: text }
+      - { name: pillars_intro, type: string }
+      - { name: pillars, type: string, list: true }
+      - { name: history_year, type: string }
+      - { name: history_caption, type: string }
+      - { name: history, label: Our history, type: rich-text, options: { format: markdown } }
+      - { name: when_we_fly, label: When we fly, type: rich-text, options: { format: markdown } }
+      - { name: joining_lead, type: string }
+      - { name: joining, label: Joining the club, type: rich-text, options: { format: markdown } }
+      - { name: joining_steps, type: text, list: true }
+      - { name: application_url, label: Membership application link, type: string }
+      - name: more
+        label: More about the club links
+        type: object
+        list: true
+        fields:
+          - { name: text, type: string }
+          - { name: url, type: string }
+
+  - name: fees_page
+    label: Fees & prices page
+    type: file
+    path: content/fees/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: parent, type: string, hidden: true, default: /about }
+      - { name: intro, type: text }
+      - { name: flying_note, type: text }
+      - name: flying_charges
+        type: object
+        list: true
+        fields:
+          - { name: price, type: string }
+          - { name: title, type: string }
+          - { name: text, type: text }
+      - { name: membership_title, type: string }
+      - { name: membership_intro, type: text }
+      - name: membership
+        label: Membership fees
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: note, type: string }
+          - { name: full_year, label: Full year, type: string }
+          - { name: half_year, label: Half year, type: string }
+          - { name: quarter, label: Quarter, type: string }
+      - { name: membership_note, type: text }
+      - { name: ufs_price, label: Unlimited Flying Scheme price, type: string }
+      - { name: ufs_text, label: Unlimited Flying Scheme details, type: text }
+      - name: paying
+        label: How to pay
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
+      - { name: youth_text, label: Youth groups, type: text }
+      - name: youth_rates
+        type: object
+        list: true
+        fields:
+          - { name: launch, type: string }
+          - { name: cost, type: string }
+          - { name: time, type: string }
+      - { name: other, label: Footnote, type: text }
+
+  - name: contact_page
+    label: Contact page
+    type: file
+    path: content/contact/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: heading, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: eyebrow, type: string }
+      - { name: intro, type: text }
+      - { name: hero_image, label: Header photo, type: image }
+      - name: help
+        label: Get help with
+        type: object
+        list: true
+        fields: &person
+          - { name: role, type: string }
+          - { name: name, type: string }
+          - { name: phone, type: string }
+          - { name: email, type: string }
+      - name: key_contacts
+        label: Key contacts
+        type: object
+        list: true
+        fields: *person
+      - { name: address, type: text }
+      - { name: map_url, label: Google Maps link, type: string }
+      - { name: postal, label: Postal address, type: text }
+
+  - name: training_page
+    label: Training journey page
+    type: file
+    path: content/training-journey/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: heading, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: parent, type: string, hidden: true, default: /trial-flights }
+      - { name: intro, type: text }
+      - { name: journey_image, type: image }
+      - { name: journey_text, type: text }
+      - name: stages
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
+      - name: how_it_works
+        label: How training works
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
+      - { name: detail, label: "Want the detail?", type: text }
+      - { name: syllabus_url, type: string }
+
+  - name: visiting_page
+    label: Visiting pilots page
+    type: file
+    path: content/visiting-pilots/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: heading, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: eyebrow, type: string }
+      - { name: intro, type: text }
+      - { name: hero_image, label: Header photo, type: image }
+      - name: options
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: tag, type: string }
+          - { name: text, type: text }
+      - { name: briefing_intro, type: text }
+      - name: briefing
+        label: Airfield briefing
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
+      - name: briefing_links
+        type: object
+        list: true
+        fields:
+          - { name: text, type: string }
+          - { name: url, type: string }
+      - { name: good_to_know, type: text, list: true }
+      - name: nearby_clubs
+        type: object
+        list: true
+        fields:
+          - { name: text, type: string }
+          - { name: url, type: string }
+      - name: cta
+        label: Call to action
+        type: object
+        fields: &cta
+          - { name: title, type: string }
+          - { name: text, type: string }
+          - { name: button, type: string }
+          - { name: url, type: string }
+
+  - name: tow_page
+    label: Tow pilots page
+    type: file
+    path: content/tow-pilots/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: heading, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: eyebrow, type: string }
+      - { name: intro, type: text }
+      - { name: hero_image, label: Header photo, type: image }
+      - name: rows
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
+      - { name: cta, label: Call to action, type: object, fields: *cta }
+
+  - name: members_page
+    label: Members page
+    type: file
+    path: content/members/_index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: eyebrow, type: string }
+      - { name: intro, type: text }
+      - { name: cta, label: Roster banner, type: object, fields: *cta }
+
+  - name: members_pages
+    label: Members document pages
+    type: collection
+    path: content/members
+    exclude: [_index.md]
+    view:
+      fields: [title]
+      sort: [weight]
+    fields:
+      - { name: title, type: string, required: true }
+      - { name: weight, label: Order, type: number }
+      - { name: parent, type: string, hidden: true, default: /members }
+      - { name: eyebrow, type: string, hidden: true, default: Members }
+      - { name: summary, label: Summary on the Members page, type: string }
+      - { name: intro, type: text }
+      - name: groups
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - name: links
+            type: object
+            list: true
+            fields:
+              - { name: title, type: string }
+              - { name: description, type: string }
+              - { name: url, label: Link (Google Drive or page), type: string }
+
+  - name: aircraft_page
+    label: Our aircraft page
+    type: file
+    path: content/aircraft/_index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: parent, type: string, hidden: true, default: /about }
+      - { name: intro, type: text }

@@ -1,10 +1,7 @@
 {{ define "main" }}
+{{ partial "page-head.html" . }}
 {{ with .Params }}
 <div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
-  <section class="pt-12 md:pt-20">
-    <h1 class="font-head font-bold text-[clamp(34px,5.4vw,60px)] leading-[1.02] tracking-[-0.02em] text-navy">Weather</h1>
-    <p class="mt-4 text-lg text-body max-w-[56ch]">{{ .intro }}</p>
-  </section>
 
   <section class="mt-12">
     <div class="flex flex-wrap items-baseline justify-between gap-2 mb-5">

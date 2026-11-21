@@ -1,0 +1,9 @@
+{{- /* Two-column "heading | paragraph" rows. Pass a list of {title, text}; text may contain Markdown. */ -}}
+<div class="border-b border-line">
+  {{- range . }}
+  <div class="grid md:grid-cols-3 gap-x-10 gap-y-2 py-6 border-t border-line">
+    <h3 class="font-head font-bold text-[22px] tracking-[-0.01em] text-navy">{{ .title }}</h3>
+    <div class="md:col-span-2 text-[#2c4260] max-w-[62ch] prose-links [&_p+p]:mt-3">{{ .text | markdownify }}</div>
+  </div>
+  {{- end }}
+</div>

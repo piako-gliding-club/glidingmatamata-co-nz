@@ -1,11 +1,8 @@
 {{ define "main" }}
 {{- $planes := .Pages.ByWeight -}}
 {{- $cats := slice }}{{ range $planes }}{{ $cats = $cats | append .Params.category }}{{ end -}}
+{{ partial "page-head.html" . }}
 <div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
-  <section class="pt-12 md:pt-20">
-    <h1 class="font-head font-bold text-[clamp(34px,5.4vw,60px)] leading-[1.02] tracking-[-0.02em] text-navy">{{ .Title }}</h1>
-    <p class="mt-4 text-lg text-body max-w-[56ch]">{{ .Params.intro }}</p>
-  </section>
 
   {{- range $cat := uniq $cats }}
   <section class="mt-12 md:mt-18">

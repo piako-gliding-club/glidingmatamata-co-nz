@@ -1,0 +1,5 @@
+<div class="flex flex-wrap gap-3">
+  {{- range . }}
+  <a href="{{ .url | relURL }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="text-sm px-4 py-2 rounded-full border border-line bg-white text-navy hover:border-gold">{{ .text }}</a>
+  {{- end }}
+</div>

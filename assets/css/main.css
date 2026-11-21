@@ -31,3 +31,15 @@
 @utility card { @apply bg-white border border-card-line rounded-2xl; }
 @utility card-hover { @apply transition hover:border-gold hover:-translate-y-[3px] hover:shadow-[0_16px_40px_rgba(18,35,59,0.08)]; }
 @utility prose-links { & a { @apply text-navy font-semibold underline underline-offset-4; } }
+
+/* Fade content up as it scrolls into view. CSS-only; browsers without scroll-driven animations just show it. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    main :is(.card, h2, img) {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }

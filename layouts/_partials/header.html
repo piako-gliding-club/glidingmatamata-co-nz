@@ -1,0 +1,45 @@
+{{- $page := . -}}
+{{- $book := hugo.Data.settings.booking_url -}}
+<header class="sticky top-0 z-50 flex items-center gap-4 px-5 md:px-16 py-3.5 bg-page/90 backdrop-blur border-b border-line">
+  <a href="{{ "/" | relURL }}" class="flex items-center gap-3.5 mr-auto" aria-label="Piako Gliding Club — home">
+    <img src="{{ "images/logo.svg" | relURL }}" alt="" width="46" height="47" class="size-9 sm:size-auto">
+    <span class="leading-tight">
+      <span class="block font-logo font-bold text-[15px] sm:text-[19px] tracking-[0.5px] text-navy whitespace-nowrap">PIAKO GLIDING CLUB</span>
+      <span class="block font-logo font-medium text-[9.5px] tracking-[2.5px] text-label mt-0.5">MATAMATA · NEW ZEALAND</span>
+    </span>
+  </a>
+
+  <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-navy" aria-label="Main">
+    {{- range site.Menus.main }}
+      {{- $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+      <div class="relative group">
+        <a href="{{ .URL }}" class="inline-flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-card-line {{ if $active }}border-b-2 border-gold rounded-b-none{{ end }}">
+          {{ .Name }}{{ if .HasChildren }} <span aria-hidden="true" class="text-label text-xs">▾</span>{{ end }}
+        </a>
+        {{- if .HasChildren }}
+        <div class="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block">
+          <div class="flex flex-col gap-0.5 min-w-[230px] p-2 bg-white border border-line rounded-[14px] shadow-[0_22px_50px_rgba(18,35,59,0.18)]">
+            {{- range .Children }}
+            <a href="{{ .URL }}" class="px-3.5 py-2.5 rounded-lg whitespace-nowrap hover:bg-[#e6ecf3]">{{ .Name }}</a>
+            {{- end }}
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    {{- end }}
+    <a href="{{ $book }}" target="_blank" rel="noopener" class="btn-gold ml-1.5 !px-5 !py-2.5 text-sm">Book a flight ↗</a>
+  </nav>
+
+  <details class="lg:hidden relative">
+    <summary class="btn-gold !px-[18px] !py-[11px] text-sm cursor-pointer">Menu</summary>
+    <div class="absolute right-0 top-[calc(100%+10px)] flex flex-col gap-0.5 min-w-[220px] p-2 bg-white border border-line rounded-[14px] shadow-[0_22px_50px_rgba(18,35,59,0.18)]">
+      {{- range site.Menus.main }}
+        <a href="{{ .URL }}" class="px-3.5 py-3 rounded-lg font-medium text-navy hover:bg-[#e6ecf3]">{{ .Name }}</a>
+        {{- range .Children }}
+        <a href="{{ .URL }}" class="pl-[30px] pr-3.5 py-2 rounded-lg text-sm text-muted hover:bg-[#e6ecf3]">{{ .Name }}</a>
+        {{- end }}
+      {{- end }}
+      <a href="{{ $book }}" target="_blank" rel="noopener" class="btn-gold mt-1.5 text-center">Book a flight ↗</a>
+    </div>
+  </details>
+</header>

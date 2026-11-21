@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+
+@theme {
+  --color-navy: #1f3a68;
+  --color-deep: #122a4d;
+  --color-gold: #d5a02c;
+  --color-page: #eef2f6;
+  --color-tint: #e9eef4;
+  --color-body: #445a70;
+  --color-muted: #5b6b7c;
+  --color-label: #5f7994;
+  --color-line: #d6e0ea;
+  --color-card-line: #dde5ee;
+
+  --font-logo: "Cinzel", serif;
+  --font-head: "Space Grotesk", sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+@layer base {
+  body { @apply bg-page text-deep font-sans text-[17px] leading-relaxed antialiased; }
+  ::selection { @apply bg-gold text-deep; }
+  summary { list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+@utility eyebrow { @apply font-mono text-xs tracking-[0.2em] uppercase text-label; }
+@utility btn-gold { @apply inline-block font-head font-semibold rounded-xl bg-gold text-deep px-7 py-3.5 shadow-[0_6px_18px_rgba(213,160,44,0.28)] hover:brightness-105; }
+@utility card { @apply bg-white border border-card-line rounded-2xl; }
+@utility card-hover { @apply transition hover:border-gold hover:-translate-y-[3px] hover:shadow-[0_16px_40px_rgba(18,35,59,0.08)]; }
+@utility prose-links { & a { @apply text-navy font-semibold underline underline-offset-4; } }

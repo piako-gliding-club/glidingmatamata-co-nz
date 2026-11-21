@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.5",
+    "tailwindcss": "4.3.5"
+  }
+}

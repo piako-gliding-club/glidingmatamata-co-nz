@@ -1,0 +1,96 @@
+{{ define "main" }}
+{{ $s := hugo.Data.settings }}
+{{ with .Params }}
+<div class="max-w-[1100px] mx-auto px-5 md:px-16">
+  <section class="pt-12 md:pt-20">
+    <h1 class="font-head font-bold text-[clamp(34px,5.4vw,60px)] leading-[1.02] tracking-[-0.02em] text-navy max-w-[18ch]">{{ .heading }}</h1>
+    <p class="mt-4 text-lg text-body max-w-[56ch]">{{ .intro }}</p>
+  </section>
+
+  <section class="mt-12">
+    {{ partial "flight-cards.html" . }}
+    <p class="mt-5 text-[15px] text-muted max-w-[70ch]">{{ .price_note }}</p>
+    <div class="mt-8 card p-7">
+      <div class="eyebrow mb-4">Included with every trial flight</div>
+      <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-body">
+        {{- range .included }}<li><span class="text-gold font-bold mr-2">✓</span>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section id="how" class="mt-16 md:mt-24">
+    <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-8">Two ways to fly</h2>
+    <div class="grid md:grid-cols-2 gap-[18px]">
+      <div class="card p-8 flex flex-col">
+        <h3 class="font-head font-semibold text-2xl text-navy">Fly yourself</h3>
+        <p class="mt-3 text-body">{{ .fly_yourself }}</p>
+        <div class="mt-6"><a href="{{ $s.booking_url }}" target="_blank" rel="noopener" class="btn-gold">Book a flight ↗</a></div>
+        <p class="mt-6 text-[15px] text-muted [&_strong]:text-navy">{{ .turn_up | markdownify }}</p>
+      </div>
+      <div class="card p-8 flex flex-col">
+        <h3 class="font-head font-semibold text-2xl text-navy">Give it as a gift</h3>
+        <p class="mt-3 text-body">{{ .gift }}</p>
+        <div class="mt-6"><a href="{{ "/gift-vouchers/" | relURL }}" class="inline-block font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-7 py-3.5 hover:bg-navy hover:text-white">Buy a gift voucher →</a></div>
+        <p class="mt-6 text-[15px] text-muted">{{ .gift_note }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="mt-16 md:mt-24 grid md:grid-cols-[3fr_2fr] gap-10">
+    <div>
+      <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-6">How to book a trial flight</h2>
+      <ol class="space-y-5">
+        {{- range $i, $step := .booking_steps }}
+        <li class="flex gap-4">
+          <span class="flex-none size-8 rounded-full bg-navy text-white font-mono text-sm grid place-items-center">{{ add $i 1 }}</span>
+          <p class="text-body prose-links [&_strong]:text-navy">{{ $step | markdownify }}</p>
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+    <div class="card p-7 self-start">
+      <div class="eyebrow mb-4">What to bring</div>
+      <ul class="space-y-2 text-[15px] text-body">
+        {{- range .bring }}<li class="flex gap-2"><span class="text-gold font-bold">✓</span><span>{{ . }}</span></li>{{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="mt-16 md:mt-24 max-w-[760px]">
+    <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-6">On the day</h2>
+    <div class="space-y-4 text-body prose-links">{{ $.Content }}</div>
+  </section>
+</div>
+
+<section class="mt-16 md:mt-24 bg-deep text-white">
+  <div class="max-w-[1100px] mx-auto px-5 md:px-16 py-14 md:py-20 grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="font-head font-bold text-3xl">“Do I actually fly it?”</h2>
+      <p class="mt-4 text-white/80">{{ .reassurance }}</p>
+    </div>
+    <div>
+      <h2 class="font-head font-bold text-3xl">Weather &amp; rebooking</h2>
+      <p class="mt-4 text-white/80 [&_a]:text-gold [&_a]:underline [&_a]:underline-offset-4">{{ .weather | markdownify }}</p>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-[900px] mx-auto px-5 md:px-16 py-16 md:py-24">
+  <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-6">Common questions</h2>
+  <div class="divide-y divide-line border-y border-line">
+    {{- range .faqs }}
+    <details class="group py-4">
+      <summary class="flex justify-between gap-4 cursor-pointer font-head font-semibold text-lg text-navy">{{ .question }}<span class="text-gold group-open:rotate-45 transition" aria-hidden="true">+</span></summary>
+      <p class="mt-3 text-body">{{ .answer }}</p>
+    </details>
+    {{- end }}
+  </div>
+
+  <div class="mt-16 border-t border-line pt-7">
+    <div class="eyebrow mb-3">Thinking about going further?</div>
+    <p class="font-head font-semibold text-2xl text-navy max-w-[30ch]">A trial flight is the first step on the path to becoming a qualified glider pilot.</p>
+    <a href="{{ $s.booking_url }}" target="_blank" rel="noopener" class="btn-gold mt-6">Book a trial flight ↗</a>
+  </div>
+</div>
+{{ end }}
+{{ end }}

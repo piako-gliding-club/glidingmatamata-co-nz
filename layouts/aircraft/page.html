@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ with .Params }}
+<div class="max-w-[1000px] mx-auto px-5 md:px-16 pb-20">
+  <div class="pt-6 md:pt-8 font-mono text-xs text-label"><a href="{{ "/aircraft/" | relURL }}" class="hover:text-navy">Our aircraft</a> &nbsp;/&nbsp; {{ .registration | default .model }}</div>
+
+  <section class="mt-6">
+    <div class="eyebrow">{{ .category }}</div>
+    <h1 class="mt-2 font-head font-bold text-[clamp(34px,5vw,56px)] leading-[1.02] tracking-[-0.02em] text-navy">{{ $.Title }}</h1>
+    <p class="mt-3 text-lg text-body">{{ .tagline }}</p>
+  </section>
+
+  <img src="{{ .photo | relURL }}" alt="{{ $.Title }}" class="mt-8 w-full max-h-[480px] object-cover rounded-2xl bg-card-line">
+
+  <dl class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-[18px]">
+    {{- range .stats }}
+    <div class="card p-5">
+      <dd class="font-head font-semibold text-lg text-navy">{{ .value }}</dd>
+      <dt class="mt-1 font-mono text-xs text-label">{{ .label }}</dt>
+    </div>
+    {{- end }}
+  </dl>
+
+  <section class="mt-12 max-w-[70ch]">
+    <h2 class="eyebrow mb-4">The story</h2>
+    <div class="space-y-4 text-body">{{ $.Content }}</div>
+  </section>
+
+  {{- with .documents }}
+  <section class="mt-12">
+    <h2 class="eyebrow mb-4">Manuals and documents</h2>
+    <div class="flex flex-wrap gap-3">
+      {{- range . }}
+      <a href="{{ .url | default "#" }}" target="_blank" rel="noopener" class="card card-hover px-5 py-3 font-semibold text-navy">{{ .title }} <span class="text-sm font-normal text-muted">Google Drive ↗</span></a>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <a href="{{ "/aircraft/" | relURL }}" class="inline-block mt-14 font-semibold text-navy underline underline-offset-4">← All aircraft</a>
+</div>
+{{ end }}
+{{ end }}

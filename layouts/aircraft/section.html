@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{- $planes := .Pages.ByWeight -}}
+{{- $cats := slice }}{{ range $planes }}{{ $cats = $cats | append .Params.category }}{{ end -}}
+<div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
+  <section class="pt-12 md:pt-20">
+    <h1 class="font-head font-bold text-[clamp(34px,5.4vw,60px)] leading-[1.02] tracking-[-0.02em] text-navy">{{ .Title }}</h1>
+    <p class="mt-4 text-lg text-body max-w-[56ch]">{{ .Params.intro }}</p>
+  </section>
+
+  {{- range $cat := uniq $cats }}
+  <section class="mt-12 md:mt-18">
+    <h2 class="font-mono text-xs tracking-[0.2em] uppercase text-[#2d5f90] pb-3 border-b-2 border-gold mb-7">{{ $cat }}</h2>
+    <div class="grid md:grid-cols-2 gap-x-7 gap-y-10">
+      {{- range where $planes "Params.category" $cat }}
+      <a href="{{ .RelPermalink }}" class="group flex flex-col gap-2.5">
+        <img src="{{ .Params.photo | relURL }}" alt="{{ .Title }}" class="w-full aspect-[4/3] object-cover rounded-[14px] bg-card-line">
+        <div class="flex items-baseline gap-3 mt-1.5">
+          {{ with .Params.registration }}<span class="font-mono font-semibold text-sm tracking-[0.08em] text-white bg-navy rounded-md px-2">{{ . }}</span>{{ end }}
+          <span class="font-head font-bold text-[22px] text-navy">{{ .Params.model }}</span>
+        </div>
+        <p class="text-[15px] text-[#2c4260]">{{ .Params.summary }}</p>
+        <span class="text-sm font-semibold text-navy underline underline-offset-4 group-hover:text-gold">The story, stats and manuals →</span>
+      </a>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</div>
+{{ end }}

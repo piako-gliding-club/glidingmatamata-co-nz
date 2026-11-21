@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{ with .Params }}
+<div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
+  <section class="pt-12 md:pt-20">
+    <h1 class="font-head font-bold text-[clamp(34px,5.4vw,60px)] leading-[1.02] tracking-[-0.02em] text-navy">Weather</h1>
+    <p class="mt-4 text-lg text-body max-w-[56ch]">{{ .intro }}</p>
+  </section>
+
+  <section class="mt-12">
+    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-5">
+      <h2 class="font-head font-bold text-3xl text-navy">Webcams</h2>
+      <span class="font-mono text-xs text-label">Images refresh each time you load the page</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-[18px]">
+      {{- range .webcams }}
+      <a href="{{ .image }}" target="_blank" rel="noopener" class="card card-hover overflow-hidden">
+        <img src="{{ .image }}" alt="Webcam {{ lower .title }}" loading="lazy" class="w-full aspect-video object-cover bg-card-line">
+        <div class="flex justify-between items-baseline gap-3 px-5 py-4">
+          <span><span class="font-head font-semibold text-navy">{{ .title }}</span> <span class="text-sm text-muted">{{ .subtitle }}</span></span>
+          <span class="text-sm font-semibold text-gold whitespace-nowrap">View larger ↗</span>
+        </div>
+      </a>
+      {{- end }}
+    </div>
+    <div class="mt-4 flex flex-wrap gap-3">
+      {{- range .webcam_links }}<a href="{{ .url }}" target="_blank" rel="noopener" class="text-sm px-4 py-2 rounded-full border border-line text-navy hover:border-gold">{{ .text }}</a>{{ end }}
+    </div>
+  </section>
+
+  {{- with .aerodrome_embed }}
+  <section class="mt-16">
+    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-5">
+      <h2 class="font-head font-bold text-3xl text-navy">NZMA aerodrome information</h2>
+      <span class="font-mono text-xs text-label">METAR, NOTAMs and aerodrome data via aip.aero</span>
+    </div>
+    <iframe src="{{ . }}" title="NZMA aerodrome information" loading="lazy" class="w-full h-[560px] card"></iframe>
+  </section>
+  {{- end }}
+
+  {{- range slice (dict "title" "Forecasts" "items" .forecasts) (dict "title" "Weather stations" "items" .stations) }}
+  <section class="mt-16">
+    <h2 class="font-head font-bold text-3xl text-navy mb-5">{{ .title }}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[18px]">
+      {{- range .items }}
+      <a href="{{ .url }}" target="_blank" rel="noopener" class="card card-hover p-5 flex flex-col gap-1.5">
+        <span class="font-head font-semibold text-lg text-navy">{{ .title }} <span class="text-gold">↗</span></span>
+        <span class="text-sm text-muted">{{ .text }}</span>
+      </a>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</div>
+{{ end }}
+{{ end }}

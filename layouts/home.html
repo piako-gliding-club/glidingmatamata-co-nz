@@ -1,0 +1,49 @@
+{{ define "main" }}
+{{ with .Params }}
+<section class="relative overflow-hidden bg-deep">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ .hero_image | relURL }}')"></div>
+  <div class="absolute inset-0 bg-linear-to-b from-[rgba(9,20,33,0.30)] via-[rgba(9,20,33,0.55)] to-[rgba(9,20,33,0.82)]"></div>
+  <svg viewBox="0 0 1200 600" preserveAspectRatio="none" class="absolute inset-0 size-full opacity-50" aria-hidden="true">
+    <path d="M -40 480 C 300 470, 520 300, 780 220 S 1180 60, 1320 20" fill="none" stroke="#d5a02c" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" opacity="0.7"/>
+  </svg>
+  <div class="relative max-w-[1200px] mx-auto px-5 md:px-16 py-20 md:py-36 min-h-[clamp(500px,74vh,760px)] flex flex-col justify-center">
+    <h1 class="font-head font-bold text-[clamp(48px,8vw,104px)] leading-[0.95] tracking-[-0.03em] text-white max-w-[14ch] text-balance">{{ .hero_title }}</h1>
+    <p class="mt-6 text-[clamp(18px,2.2vw,24px)] leading-normal text-white/85 max-w-[30ch]">{{ .hero_text }}</p>
+    <div class="flex flex-wrap gap-3.5 mt-10">
+      <a href="{{ "/trial-flights/" | relURL }}" class="btn-gold text-[17px] !px-[30px] !py-4">Book a trial flight →</a>
+      <a href="#" class="font-head font-semibold text-[17px] px-[30px] py-4 rounded-xl border-[1.5px] border-white/50 text-white hover:bg-white/10">The training journey</a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-tint border-y border-card-line">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-16 py-14 md:py-26">
+    <div class="eyebrow mb-3">Where do you want to go</div>
+    <h2 class="font-head font-bold text-[clamp(28px,4vw,44px)] leading-tight tracking-[-0.02em] text-navy mb-11">Find your path</h2>
+    <div class="grid sm:grid-cols-2 gap-[18px]">
+      {{- range .paths }}
+      <a href="{{ .url | relURL }}" class="card card-hover flex overflow-hidden min-h-[190px]">
+        <div class="flex-none w-[150px] bg-cover bg-center" style="background-image: url('{{ .image | relURL }}')"></div>
+        <div class="flex-1 px-7 py-[26px] flex flex-col">
+          <div class="font-head font-semibold text-2xl text-navy mb-2.5">{{ .title }}</div>
+          <p class="text-[15px] text-muted leading-normal flex-1">{{ .text }}</p>
+          <div class="mt-[18px] font-semibold text-gold">{{ .link_text }} →</div>
+        </div>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="bg-deep text-white mt-14 md:mt-26">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-16 py-[22px] flex flex-wrap items-center gap-x-6 gap-y-3.5">
+    <div class="font-mono text-xs tracking-[0.2em] uppercase text-gold">Flying conditions</div>
+    <div class="flex flex-wrap gap-3">
+      {{- range .conditions }}
+      <a href="{{ .url | relURL }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="text-sm px-[18px] py-2.5 rounded-full border border-white/20 hover:border-gold">{{ .text }}</a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

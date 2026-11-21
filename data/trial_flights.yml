@@ -1,0 +1,19 @@
+flights:
+  - name: Basic
+    height: 2,000 ft
+    price: 200
+    duration: 10–20 minutes aloft
+    description: The classic introduction — time on the controls and a first taste of soaring flight.
+    popular: false
+  - name: Extended
+    height: 3,000 ft
+    price: 300
+    duration: 15–30 minutes aloft
+    description: More height and air time, and a real chance to work some lift with your instructor.
+    popular: true
+  - name: “Mile High”
+    height: 5,000 ft
+    price: 500
+    duration: 30–45 minutes aloft
+    description: Our longest flight — a full soaring experience from a mile above the Waikato.
+    popular: false

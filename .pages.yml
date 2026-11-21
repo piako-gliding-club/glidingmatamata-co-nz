@@ -1,0 +1,199 @@
+media:
+  input: static/images
+  output: /images
+
+content:
+  - name: notices
+    label: Notices banner
+    type: file
+    path: data/notices.yml
+    format: yaml
+    fields:
+      - name: notices
+        label: Notices
+        description: Shown at the top of every page until the "Show until" date has passed.
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: details, label: Details, type: string, required: true }
+          - { name: link_text, label: Link text, type: string, description: Leave empty for no link }
+          - { name: link_url, label: Link URL, type: string }
+          - { name: show_until, label: Show until, type: date, required: true, options: { format: yyyy-MM-dd } }
+
+  - name: trial_flights
+    label: Trial flight prices
+    type: file
+    path: data/trial_flights.yml
+    format: yaml
+    fields:
+      - name: flights
+        label: Flights
+        description: Used on both the Trial flights and Gift vouchers pages.
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: height, label: Tow height, type: string }
+          - { name: price, label: Price ($), type: number, required: true }
+          - { name: duration, label: Duration, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: popular, label: Highlight as most popular, type: boolean }
+
+  - name: settings
+    label: Site settings
+    type: file
+    path: data/settings.yml
+    format: yaml
+    fields:
+      - { name: booking_url, label: Booking site URL, type: string, required: true }
+      - { name: flights_email, label: Trial flights email, type: string, required: true }
+
+  - name: aircraft
+    label: Aircraft
+    type: collection
+    path: content/aircraft
+    exclude: [_index.md]
+    filename: "{fields.registration}.md"
+    view:
+      fields: [title, category]
+      sort: [weight]
+    fields:
+      - { name: title, label: Page title, type: string, required: true }
+      - { name: registration, label: Registration, type: string, description: e.g. ZK-GEO. Leave empty for the winch. }
+      - { name: model, label: Model, type: string, required: true }
+      - name: category
+        label: Category
+        type: select
+        options: { values: [Twin-seat trainers, Single-seaters, Launching] }
+      - { name: weight, label: Order, type: number, description: Lower numbers appear first }
+      - { name: photo, label: Photo, type: image }
+      - { name: summary, label: Card summary, type: text }
+      - { name: tagline, label: Tagline, type: string }
+      - name: stats
+        label: Stats
+        type: object
+        list: true
+        fields:
+          - { name: label, type: string }
+          - { name: value, type: string }
+      - name: documents
+        label: Manuals and documents
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: url, label: Google Drive link, type: string }
+      - { name: body, label: The story, type: rich-text, options: { format: markdown } }
+
+  - name: home
+    label: Home page
+    type: file
+    path: content/_index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string, hidden: true, default: Home }
+      - { name: description, label: Search engine description, type: text }
+      - { name: hero_title, label: Headline, type: string }
+      - { name: hero_text, label: Intro, type: text }
+      - { name: hero_image, label: Hero photo, type: image }
+      - name: paths
+        label: Find your path cards
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
+          - { name: link_text, type: string }
+          - { name: url, type: string }
+          - { name: image, type: image }
+      - name: conditions
+        label: Flying conditions links
+        type: object
+        list: true
+        fields:
+          - { name: text, type: string }
+          - { name: url, type: string }
+
+  - name: trial_flights_page
+    label: Trial flights page
+    type: file
+    path: content/trial-flights/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: heading, type: string }
+      - { name: intro, type: text }
+      - { name: price_note, label: Note under prices, type: text }
+      - { name: included, label: Included with every trial flight, type: string, list: true }
+      - { name: fly_yourself, label: Fly yourself, type: text }
+      - { name: turn_up, label: Can I just turn up?, type: text }
+      - { name: gift, label: Give it as a gift, type: text }
+      - { name: gift_note, label: Gift note, type: text }
+      - { name: booking_steps, label: How to book (steps), type: text, list: true }
+      - { name: bring, label: What to bring, type: string, list: true }
+      - { name: reassurance, label: "\"Do I actually fly it?\"", type: text }
+      - { name: weather, label: Weather & rebooking, type: text }
+      - name: faqs
+        label: Common questions
+        type: object
+        list: true
+        fields:
+          - { name: question, type: string }
+          - { name: answer, type: text }
+      - { name: body, label: On the day, type: rich-text, options: { format: markdown } }
+
+  - name: gift_vouchers_page
+    label: Gift vouchers page
+    type: file
+    path: content/gift-vouchers/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: heading, type: string }
+      - { name: intro, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: perks, type: string, list: true }
+      - { name: body, label: How to buy, type: rich-text, options: { format: markdown } }
+
+  - name: weather_page
+    label: Weather page
+    type: file
+    path: content/weather/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: intro, type: text }
+      - name: webcams
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: subtitle, type: string }
+          - { name: image, label: Webcam image URL, type: string }
+      - name: webcam_links
+        label: More webcam links
+        type: object
+        list: true
+        fields:
+          - { name: text, type: string }
+          - { name: url, type: string }
+      - { name: aerodrome_embed, label: Aerodrome info embed URL, type: string }
+      - name: forecasts
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: string }
+          - { name: url, type: string }
+      - name: stations
+        label: Weather stations
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: string }
+          - { name: url, type: string }

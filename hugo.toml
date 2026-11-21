@@ -1,0 +1,57 @@
+baseURL = "https://example.org/"
+locale = "en-NZ"
+title = "Piako Gliding Club"
+disableKinds = ["taxonomy", "term", "rss", "sitemap"]
+
+[build.buildStats]
+  enable = true
+
+[[build.cachebusters]]
+  source = "assets/notwatching/hugo_stats\\.json"
+  target = "css"
+
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "hugo_stats.json"
+  target = "assets/notwatching/hugo_stats.json"
+  disableWatch = true
+
+[[menus.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+[[menus.main]]
+  name = "About"
+  identifier = "about"
+  pageRef = "/aircraft"
+  weight = 20
+[[menus.main]]
+  name = "Our aircraft"
+  parent = "about"
+  pageRef = "/aircraft"
+  weight = 21
+[[menus.main]]
+  name = "Fly with us"
+  identifier = "fly"
+  pageRef = "/trial-flights"
+  weight = 30
+[[menus.main]]
+  name = "Trial flights"
+  parent = "fly"
+  pageRef = "/trial-flights"
+  weight = 31
+[[menus.main]]
+  name = "Gift vouchers"
+  parent = "fly"
+  pageRef = "/gift-vouchers"
+  weight = 32
+[[menus.main]]
+  name = "Weather"
+  pageRef = "/weather"
+  weight = 40
+
+[security.exec]
+  allow = ['^node$', '^tailwindcss$', '^git$']

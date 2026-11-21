@@ -1,0 +1,29 @@
+{{- $today := now.Format "2006-01-02" -}}
+{{- $live := slice -}}
+{{- range hugo.Data.notices.notices -}}
+  {{- if ge (time.Format "2006-01-02" .show_until) $today }}{{ $live = $live | append . }}{{ end -}}
+{{- end -}}
+{{- with $live }}
+<div id="notices" class="bg-deep text-white">
+  <ul class="max-w-[1200px] mx-auto px-5 md:px-16 py-1.5 divide-y divide-white/10">
+    {{- range . }}
+    <li data-until="{{ time.Format "2006-01-02" .show_until }}" class="flex flex-wrap items-baseline gap-x-5 gap-y-1 py-2.5">
+      <span class="flex items-center gap-2.5 w-[150px] flex-none font-mono text-[11px] tracking-[0.16em] uppercase text-gold">
+        <span class="size-[7px] rounded-full bg-gold"></span>Notice
+      </span>
+      <span class="font-head font-semibold">{{ .title }}</span>
+      <span class="text-sm text-white/75 flex-[1_1_260px]">{{ .details }}</span>
+      {{- if .link_url }}<a href="{{ .link_url }}" class="text-sm font-semibold text-gold whitespace-nowrap hover:underline">{{ .link_text | default "More" }} →</a>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{/* The site is only rebuilt when someone edits it, so hide notices that have expired since the last build. */}}
+<script>
+  (() => {
+    const today = new Date().toLocaleDateString("en-CA", { timeZone: "Pacific/Auckland" });
+    document.querySelectorAll("#notices [data-until]").forEach(li => { if (li.dataset.until < today) li.remove(); });
+    if (!document.querySelector("#notices [data-until]")) document.getElementById("notices").remove();
+  })();
+</script>
+{{- end }}

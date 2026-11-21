@@ -43,3 +43,9 @@
   }
 }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+
+/* Fade the page content in on load; the header stays put so moving between pages feels smooth. */
+@media (prefers-reduced-motion: no-preference) {
+  main { animation: fade-in 0.35s ease-out; }
+}
+@keyframes fade-in { from { opacity: 0; } }

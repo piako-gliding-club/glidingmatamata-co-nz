@@ -1,0 +1,23 @@
+{{- /* Club details for search engines, pulled from the Contact and About pages so CMS edits flow through. */ -}}
+{{- $contact := site.GetPage "/contact" -}}
+{{- $about := site.GetPage "/about" -}}
+{{- $general := index $contact.Params.help 0 -}}
+{{- $offers := slice -}}
+{{- range hugo.Data.trial_flights.flights -}}
+  {{- $offers = $offers | append (dict "@type" "Offer" "name" (printf "%s trial flight (%s)" .name .height) "price" .price "priceCurrency" "NZD" "url" (absURL "trial-flights/")) -}}
+{{- end -}}
+{{- $data := dict
+  "@context" "https://schema.org"
+  "@type" "SportsClub"
+  "name" site.Title
+  "url" site.Home.Permalink
+  "logo" (absURL "images/logo.svg")
+  "image" (strings.TrimPrefix "/" site.Home.Params.hero_image | absURL)
+  "description" (printf "%s Flying days: %s" site.Home.Description ($about.Params.when_we_fly | plainify | replaceRE `\s+` " " | strings.TrimSpace))
+  "sport" "Gliding"
+  "email" $general.email
+  "telephone" (replaceRE `^0` "+64 " $general.phone)
+  "address" (dict "@type" "PostalAddress" "streetAddress" "Matamata Aerodrome, 6393 State Highway 27" "addressLocality" "Waharoa" "addressRegion" "Waikato" "addressCountry" "NZ")
+  "makesOffer" $offers
+-}}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>

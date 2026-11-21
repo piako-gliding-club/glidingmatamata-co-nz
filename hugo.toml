@@ -1,7 +1,8 @@
 baseURL = "https://example.org/"
 locale = "en-NZ"
 title = "Piako Gliding Club"
-disableKinds = ["taxonomy", "term", "rss", "sitemap"]
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
 
 [build.buildStats]
   enable = true

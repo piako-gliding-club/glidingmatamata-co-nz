@@ -110,3 +110,6 @@ enableRobotsTXT = true
 
 [security.exec]
   allow = ['^node$', '^tailwindcss$', '^git$']
+
+[minify]
+  disableXML = true

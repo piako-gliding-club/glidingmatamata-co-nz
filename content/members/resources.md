@@ -1,6 +1,6 @@
 ---
 title: Club resources
-weight: 3
+weight: 4
 parent: /members
 eyebrow: Members
 summary: Projects, records and shared material.

@@ -445,6 +445,13 @@ content:
               - { name: title, type: string }
               - { name: description, type: string }
               - { name: url, label: Link (Google Drive or page), type: string }
+      - name: rows
+        label: Text sections (instead of document links)
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
 
   - name: aircraft_page
     label: Our aircraft page

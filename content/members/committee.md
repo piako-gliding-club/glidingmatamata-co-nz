@@ -1,6 +1,6 @@
 ---
 title: Committee & governance
-weight: 2
+weight: 3
 parent: /members
 eyebrow: Members
 summary: Minutes, roles and the rules the club runs by.

@@ -3,7 +3,7 @@
   {{- range . }}
   <div class="grid md:grid-cols-3 gap-x-10 gap-y-2 py-6 border-t border-line">
     <h3 class="font-head font-bold text-[22px] tracking-[-0.01em] text-navy">{{ .title }}</h3>
-    <div class="md:col-span-2 text-[#2c4260] max-w-[62ch] prose-links [&_p+p]:mt-3">{{ .text | markdownify }}</div>
+    <div class="md:col-span-2 text-[#2c4260] max-w-[62ch] prose-links [&_p+p]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_li+li]:mt-1.5 [&_strong]:text-navy">{{ .text | markdownify }}</div>
   </div>
   {{- end }}
 </div>

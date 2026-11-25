@@ -1,6 +1,6 @@
 ---
 title: Forms and SoPs
-weight: 1
+weight: 2
 parent: /members
 eyebrow: Members
 summary: How we run a flying day, and the paperwork that goes with it.

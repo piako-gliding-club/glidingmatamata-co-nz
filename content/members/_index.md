@@ -1,6 +1,5 @@
 ---
 title: Members
-eyebrow: Members
 intro: Everything you need as a club member. Documents open in Google Drive — sign in with the Google account you use for the club.
 cta:
   title: Roster & bookings

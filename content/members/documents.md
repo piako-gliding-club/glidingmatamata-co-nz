@@ -3,11 +3,17 @@ title: Forms and documents
 parent: /members
 intro: The procedures, forms and records the club maintains. Most open in Google Drive — sign in with the Google account you use for the club.
 groups:
-- title: Procedures
+- title: Club rules and procedures
   links:
   - title: How We Do Things
     description: The club's standard operating procedures
     url: https://drive.google.com/file/d/1M2ewDgWizKB7HvEPYSv4Pd2z4RP1ziD3/view?usp=drive_link
+  - title: Constitution
+    description: Current club constitution and rules
+    url: https://drive.google.com/file/d/1yVw7urcvOSS6Yp1L6OACfQYBzKWmyjnU/view?usp=drive_link
+  - title: Privacy policy
+    description: Draft — how the club handles members' information
+    url: ''
 - title: Flying day procedures
   links:
   - title: Gridding procedures
@@ -33,9 +39,6 @@ groups:
   - title: Medical forms
     description: Medical declaration for solo flying
     url: ''
-  - title: Barograph certificates
-    description: For badge and record claims
-    url: ''
 - title: Aircraft
   links:
   - title: Aircraft & manuals
@@ -46,15 +49,7 @@ groups:
   - title: Clubrooms IT setup
     description: The IT systems at the clubrooms, and how to use them
     url: ''
-- title: Rules & policies
-  links:
-  - title: Constitution
-    description: Current club constitution and rules
-    url: https://drive.google.com/file/d/1yVw7urcvOSS6Yp1L6OACfQYBzKWmyjnU/view?usp=drive_link
-  - title: Privacy policy
-    description: Draft — how the club handles members' information
-    url: ''
-- title: Meetings
+- title: Committee
   links:
   - title: Committee meeting minutes
     description: Monthly meetings, newest first
@@ -62,8 +57,6 @@ groups:
   - title: AGM & SGM minutes
     description: Annual and special general meetings
     url: ''
-- title: The committee
-  links:
   - title: Job descriptions
     description: The responsibilities of each committee position
     url: ''
@@ -72,7 +65,7 @@ groups:
     url: ''
   - title: Membership list
     description: Members only — contact details for current members
-    url: ''
+    url: https://piako.gliding.net.nz/members
 - title: Club
   links:
   - title: Club projects

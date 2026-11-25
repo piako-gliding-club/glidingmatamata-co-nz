@@ -33,7 +33,7 @@ how_it_works:
   - title: A typical lesson
     text: Instruction is normally one flight from aerotow (launch is being towed by a light aircraft), which can be up to one hour if soaring conditions are present, or about 15 minutes if the air is still. We also offer winch launches, which are about 5 minutes if no soaring is possible.
   - title: What it costs
-    text: An aerotow to 2,000 feet is $80 and a winch launch is $30. Young people under 26 flying with an instructor are charged only the launch fee. There is no hourly charge for the glider or instructor. [See all fees & prices](/fees/).
-detail: The full training syllabus for every stage is on the Gliding New Zealand training site. There is also an [introductory training information page ↗](https://glidingmatamata.co.nz/training/training_information/introductory_training_6_pack/).
+    text: All our flying costs are on the [fees & prices page](/fees/).
+detail: The full training syllabus for every stage is on the Gliding New Zealand training site.
 syllabus_url: https://training.gliding.co.nz
 ---

@@ -8,12 +8,8 @@ included:
   - Temporary club membership
   - Three further flights available at club rates
   - Commemorative certificate
-  - No prior experience needed
-  - No medical required for a trial flight
 fly_yourself: Book a day online, then pay on the day by cash or EFTPOS. No voucher needed.
-turn_up: "**Can I just turn up?** Often, yes. We fly most Saturdays, Sundays and Wednesdays from 11am. Some days have no trial flights because of courses or events, so check the booking calendar first."
 gift: Buy a voucher and we'll post it out. The recipient books a day that suits them, and hands it over when they arrive.
-gift_note: Pay by bank transfer or PayPal. Posted within 24 to 48 hours. Hamilton pick-up is always available. Valid for 3 years.
 booking_steps:
   - '**Check the roster.** We fly most non-raining Wednesdays, weekends and public holidays. Days marked "Sorry no trial flights or vouchers today" are unavailable, usually because of courses or events.'
   - '**Click "Book"** beside the day you want, on the [roster page ↗](https://glidingmatamata.co.nz/members/roster/).'

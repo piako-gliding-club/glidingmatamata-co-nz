@@ -128,10 +128,8 @@ content:
       - { name: intro, type: text }
       - { name: price_note, label: Note under prices, type: text }
       - { name: included, label: Included with every trial flight, type: string, list: true }
-      - { name: fly_yourself, label: Fly yourself, type: text }
-      - { name: turn_up, label: "Can I just turn up?", type: text }
+      - { name: fly_yourself, label: For yourself, type: text }
       - { name: gift, label: Give it as a gift, type: text }
-      - { name: gift_note, label: Gift note, type: text }
       - { name: booking_steps, label: How to book (steps), type: text, list: true }
       - { name: bring, label: What to bring, type: string, list: true }
       - { name: reassurance, label: "\"Do I actually fly it?\"", type: text }

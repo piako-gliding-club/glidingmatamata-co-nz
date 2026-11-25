@@ -19,19 +19,17 @@
   </section>
 
   <section id="how" class="mt-16 md:mt-24">
-    <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-8">Two ways to fly</h2>
+    <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-8">For yourself, or as a gift?</h2>
     <div class="grid md:grid-cols-2 gap-[18px]">
       <div class="card p-8 flex flex-col">
-        <h3 class="font-head font-semibold text-2xl text-navy">Fly yourself</h3>
+        <h3 class="font-head font-semibold text-2xl text-navy">For yourself</h3>
         <p class="mt-3 text-body">{{ .fly_yourself }}</p>
-        <div class="mt-6"><a href="{{ $s.booking_url }}" target="_blank" rel="noopener" class="btn-gold">Book a flight ↗</a></div>
-        <p class="mt-6 text-[15px] text-muted [&_strong]:text-navy">{{ .turn_up | markdownify }}</p>
+        <div class="mt-auto pt-6"><a href="{{ $s.booking_url }}" target="_blank" rel="noopener" class="btn-gold">Book a flight ↗</a></div>
       </div>
       <div class="card p-8 flex flex-col">
         <h3 class="font-head font-semibold text-2xl text-navy">Give it as a gift</h3>
         <p class="mt-3 text-body">{{ .gift }}</p>
-        <div class="mt-6"><a href="{{ partial "url.html" "/gift-vouchers/" }}" class="inline-block font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-7 py-3.5 hover:bg-navy hover:text-white">Buy a gift voucher →</a></div>
-        <p class="mt-6 text-[15px] text-muted">{{ .gift_note }}</p>
+        <div class="mt-auto pt-6"><a href="{{ partial "url.html" "/gift-vouchers/" }}" class="inline-block font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-7 py-3.5 hover:bg-navy hover:text-white">Buy a gift voucher →</a></div>
       </div>
     </div>
   </section>

@@ -1,0 +1,25 @@
+#!/bin/sh
+# Runs gh as the GitHub App's piako-gliding-club installation. Also git's
+# credential helper for this repo (see AGENTS.md). Reads GH_APP_ID and
+# GH_APP_KEY from ~/.config/gh-app-piako.env; looks up this org's installation itself.
+# App tokens expire after 60 min, so mint on demand and cache for 50.
+owner=piako-gliding-club
+config="${XDG_CONFIG_HOME:-$HOME/.config}/gh-app-piako.env"
+# shellcheck source=/dev/null
+. "$config" || exit 1
+real_gh=${GH_APP_REAL_GH:-/usr/bin/gh}
+cache="${XDG_CACHE_HOME:-$HOME/.cache}/gh-app-token-$owner"
+
+if [ -z "$(find "$cache" -mmin -50 2>/dev/null)" ]; then
+  umask 077
+  install_id=$("$real_gh" token installations --app-id "$GH_APP_ID" --key "$GH_APP_KEY" |
+    python3 -c "import sys,json; print(next(i['id'] for i in json.load(sys.stdin) if i['account']['login']=='$owner'))" 2>/dev/null) ||
+    { echo "scripts/gh: the GitHub App isn't installed on $owner" >&2; exit 1; }
+  token=$("$real_gh" token generate --app-id "$GH_APP_ID" --key "$GH_APP_KEY" \
+    --installation-id "$install_id" --token-only)
+  case "$token" in
+    ghs_*) mkdir -p "$(dirname "$cache")" && printf %s "$token" > "$cache" ;;
+    *) echo "scripts/gh: failed to mint a token" >&2; exit 1 ;;
+  esac
+fi
+GH_TOKEN=$(cat "$cache") exec "$real_gh" "$@"

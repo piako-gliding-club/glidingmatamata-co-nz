@@ -1,5 +1,5 @@
 ---
-title: Our club trophies
+title: Club trophies
 description: Piako Gliding Club trophies, what each is awarded for, and every past winner.
 intro: The club awards its trophies each year. Here is what each one is for, and everyone who has won it. Several are won by flying one of our [club tasks](/club-tasks/).
 trophies:

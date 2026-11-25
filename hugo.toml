@@ -30,7 +30,7 @@ enableRobotsTXT = true
   identifier = "about"
   weight = 20
 [[menus.main]]
-  name = "About gliding"
+  name = "Gliding"
   pageRef = "/about-gliding"
   parent = "about"
   weight = 22
@@ -45,12 +45,12 @@ enableRobotsTXT = true
   parent = "about"
   weight = 26
 [[menus.main]]
-  name = "Our club tasks"
+  name = "Club tasks"
   pageRef = "/club-tasks"
   parent = "about"
   weight = 28
 [[menus.main]]
-  name = "Our club trophies"
+  name = "Club trophies"
   pageRef = "/trophies"
   parent = "about"
   weight = 30

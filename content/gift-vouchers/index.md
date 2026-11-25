@@ -14,8 +14,6 @@ perks:
 
 ### 1. Pay for the voucher
 
-Pay by bank transfer if you can, or by card through PayPal. Use the recipient's name as the reference.
-
 {{< payment-options >}}
 
 ### 2. Tell us where to send it

@@ -20,6 +20,7 @@ bring:
   - A hat or cap if you have one
   - Sunscreen. You'll be outside most of the time, and it's essential in summer
   - A jacket and warm clothes. The airfield is exposed, and often windy and cold while waiting on the ground
+  - Lunch and water. You'll likely spend the day parked at the end of the airfield
   - A camera. You can take photos while up in the glider
   - Cash or EFTPOS card preferred. There is a surcharge for credit cards at the airfield
   - Your trial flight voucher, if you have one

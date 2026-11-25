@@ -1,0 +1,118 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,rwwidth,freq,desc,userdata,pics
+"ATIA Atiamuri",ATIA,NZ,3823.583S,17600.783E,199.0m,1,,,,,"Bridge",,
+"BENY Bennydale Hall",BENY,NZ,3831.333S,17521.783E,295.0m,1,,,,,"Hall",,
+"GORD Gordon",GORD,NZ,3742.433S,17550.033E,39.0m,1,,,,,"Gordon",,
+"HIKU Hikutaia",HIKU,NZ,3716.133S,17539.267E,14.0m,1,,,,,"Road Int",,
+"HINU Hinuera",HINU,NZ,3752.917S,17545.600E,75.9m,1,,,,,"Railway Xing",,
+"HODV HotelDvin",HODV,NZ,3711.267S,17508.800E,39.0m,1,,,,,"Hotel De Vin",,
+"KAIY Kaimai Yards",KAIY,NZ,3752.920S,17555.246E,323.1m,1,,,,,"KAIY Kaimai Yards.  100Km  Out & Return - KAIY Kaimai Yards - TIRS Tirohia Air Strip - KAIY Kaimai Yards is 100Km.",,
+"KERE Kerepehi",KERE,NZ,3718.017S,17532.100E,9.1m,1,,,,,"Bridge",,
+"MACE MataCemetery",MACE,NZ,3748.117S,17545.150E,68.0m,1,,,,,"Cemetery Ent",,
+"MONU Monument Rd - SH2 R/J",MONU,NZ,3715.231S,17514.358E,44.8m,1,,,,,"Junction MONUment Rd / SH 2",,
+"NZDY Drury AF",NZDY,NZ,3706.033S,17458.483E,30.5m,2,0,1000.0m,,"134.45","NZDY Drury Airfield. Unattended 134.45 - RWY 18 RH.  RWY 36 LH.  AIP 2021.02.25",,
+"NZMA Matamata AF",NZMA,NZ,3744.250S,17544.417E,53.9m,5,0,1089.0m,,"122.25","NZMA Matamata AF.  Unattended 122.25   RWY 28 LH.  RW 10 RH.  AIP 2018.11.08",,
+"NZRK Rangitaiki AS",NZRK,NZ,3853.200S,17621.817E,712.3m,2,0,1504.0m,,"119.10","NZRK Rangitaiki. Unattended 119.1 - RWY 16-34. Poor phone reception. Aerotow ok.  Phone at Farm Office 1 NM South.  AIP 2017.07.20",,
+"NZTO Tokoroa AF",NZTO,NZ,3814.200S,17553.567E,365.8m,5,0,1120.0m,,"123.25","NZTO Tokoroa. Unattended 123.25 - RWY 13 LH.   RWY 31 RH.  SWD Council (07) 885 0340.  Locked Gates a Problem. AIP 2018.03.09",,
+"NZTT Te Kuiti AF",NZTT,NZ,3818.200S,17508.817E,48.8m,2,0,866.0m,,"119.10","NZTT Te Kuiti Aerodrome.  No Specified Circuit Direction.  AIP 2017.07.20",,
+"OKOR Okoroire",OKOR,NZ,3757.217S,17548.233E,100.0m,1,,,,,"Hotel",,
+"PIAR Piarere",PIAR,NZ,3756.583S,17540.117E,110.0m,1,,,,,"Road Junction",,
+"TEPO Te Poi",TEPO,NZ,3752.367S,17550.583E,53.9m,1,,,,,"X Roads",,
+"TEPU Te Puru",TEPU,NZ,3702.733S,17531.650E,53.9m,1,,,,,,,
+"TIRO Tirohia",TIRO,NZ,3726.350S,17538.367E,14.9m,1,,,,,"Bridge",,
+"TIRS Tirohia Airstrip",TIRS,NZ,3727.397S,17543.482E,426.7m,1,,,,,"Ag strip too small and steep. NOT Suitable for glider landout. KAIY Kaimai Yards.  100Km  Out & Return - KAIY Kaimai Yards - TIRS Tirohia Ai",,
+"WADV Wardville",WADV,NZ,3743.417S,17546.767E,36.9m,1,,,,,"Wardville",,
+"WAHA Waharoa",WAHA,NZ,3745.683S,17545.200E,54.9m,1,,,,,"Service Stn",,
+"WALT Walton",WALT,NZ,3743.800S,17542.050E,36.9m,1,,,,,"Rail Overbridge",,
+"WATO Waitoa",WATO,NZ,3735.750S,17538.167E,20.1m,1,,,,,"Road Intersection",,
+-----Related Tasks-----
+"Care200","???","GORD Gordon","TIRO Tirohia","TEPO Te Poi","HIKU Hikutaia","GORD Gordon","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=5000m,A1=45,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=1,R1=5000m,A1=45,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=1,R1=5000m,A1=45,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"Kaimai Speed 100","???","KAIY Kaimai Yards","TIRS Tirohia Airstrip","KAIY Kaimai Yards","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=5000m,A1=45,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"McPherson Diamond1","???","WAHA Waharoa","NZDY Drury AF","NZTO Tokoroa AF","WAHA Waharoa","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"McPherson Diamond2","???","WAHA Waharoa","NZDY Drury AF","NZTT Te Kuiti AF","WAHA Waharoa","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"McPherson Diamond3","???","WAHA Waharoa","MONU Monument Rd - SH2 R/J","BENY Bennydale Hall","WAHA Waharoa","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"McPherson Diamond4","???","WAHA Waharoa","NZRK Rangitaiki AS","WATO Waitoa","WAHA Waharoa","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"McPherson Diamond5","???","WAHA Waharoa","TEPU Te Puru","ATIA Atiamuri","WAHA Waharoa","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"McPherson Diamond6","???","WAHA Waharoa","HODV HotelDvin","ATIA Atiamuri","WAHA Waharoa","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"MSC Diamond 1","???","OKOR Okoroire","ATIA Atiamuri","HODV HotelDvin","OKOR Okoroire","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"MSC Diamond 2","???","ATIA Atiamuri","HODV HotelDvin","OKOR Okoroire","ATIA Atiamuri","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"MSC Diamond 3","???","HODV HotelDvin","OKOR Okoroire","ATIA Atiamuri","HODV HotelDvin","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=2,Style=1,SpeedStyle=1,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=3,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"Piako Catliin 100 CW","???","WALT Walton","TIRO Tirohia","GORD Gordon","HINU Hinuera","WALT Walton","???"
+Options,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=3999.3ft,Reduce=1
+"Piako Catlin 100 CCW","???","WALT Walton","HINU Hinuera","GORD Gordon","TIRO Tirohia","WALT Walton","???"
+Options,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=3999.3ft,Reduce=1
+"Piako Riesterer CCW","???","NZMA Matamata AF","WALT Walton","MACE MataCemetery","WADV Wardville","NZMA Matamata AF","???"
+Options,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=3000.0ft
+"Piako Riesterer CW","???","NZMA Matamata AF","WADV Wardville","MACE MataCemetery","WALT Walton","NZMA Matamata AF","???"
+Options,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=3000.0ft
+"Piako Valley 150 CCW","???","WALT Walton","PIAR Piarere","GORD Gordon","KERE Kerepehi","WALT Walton","???"
+Options,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=3999.3ft,Reduce=1
+"Piako Valley 150 CW","???","WALT Walton","KERE Kerepehi","GORD Gordon","PIAR Piarere","WALT Walton","???"
+Options,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=3999.3ft,Reduce=1
+"Silver Ridge 50","???","GORD Gordon","HIKU Hikutaia","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+"Silver Valley 50","???","WADV Wardville","KERE Kerepehi","???"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,SpeedStyle=0,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1
+ObsZone=1,Style=3,SpeedStyle=2,R1=500m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Line=1

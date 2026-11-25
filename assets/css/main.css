@@ -50,3 +50,16 @@
   main { animation: fade-in 0.35s ease-out; }
 }
 @keyframes fade-in { from { opacity: 0; } }
+
+/* Plain long-form text from Markdown. */
+@utility prose-article {
+  @apply text-body prose-links;
+  & h2 { @apply mt-10 font-head font-bold text-2xl text-navy; }
+  & h3 { @apply mt-6 font-head font-bold text-xl text-navy; }
+  & p { @apply mt-4; }
+  & ul, & ol { @apply mt-3 pl-5; }
+  & ul { @apply list-disc; }
+  & ol { @apply list-decimal; }
+  & li + li { @apply mt-2; }
+  & strong { @apply text-navy; }
+}

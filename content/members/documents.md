@@ -25,6 +25,14 @@ groups:
   - title: Start of Season Briefing notes
     description: Notes from the compulsory briefing
     url: ''
+- title: Club tasks and trophies
+  links:
+  - title: Club tasks
+    description: Set courses to fly through the season, and how to submit them
+    url: /club-tasks/
+  - title: Trophies
+    description: What each club trophy is for, and past winners
+    url: /trophies/
 - title: Forms
   links:
   - title: Membership application

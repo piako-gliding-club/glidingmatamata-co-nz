@@ -1,0 +1,11 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
+"01 MATAMATA",,,3744.247S,17544.424E,54.9m,2,0,0.0m,"Matamata Fin","Matamata Fin"
+"03 Tirohia",,,3726.347S,17538.361E,15.0m,1,,,,"Bridge"
+"05 Hikutaia",,,3716.132S,17539.270E,15.0m,1,,,,"Road Interse"
+"32 Te Poi",,,3752.360S,17550.575E,55.0m,1,,,,"X Roads"
+"72 Gordon",,,3742.429S,17550.039E,39.0m,1,,,,"Gordon"
+-----Related Tasks-----
+"Care 200","01 MATAMATA","72 Gordon","03 Tirohia","32 Te Poi","05 Hikutaia","72 Gordon","01 MATAMATA"
+Options,NearAlt=656.0ft
+ObsZone=0,Style=2,R1=500m,A1=45,Line=1
+ObsZone=4,Style=3,R1=500m,A1=45,Line=1

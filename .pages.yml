@@ -468,6 +468,51 @@ content:
       - { name: intro, type: text }
       - { name: body, label: Content, type: rich-text }
 
+  - name: about_gliding_page
+    label: About gliding
+    type: file
+    path: content/about-gliding/index.md
+    format: yaml-frontmatter
+    fields: &article
+      - { name: title, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: parent, type: string, hidden: true, default: /about }
+      - { name: intro, type: text }
+      - { name: body, label: Content, type: rich-text }
+
+  - name: club_tasks_page
+    label: Club tasks
+    type: file
+    path: content/club-tasks/index.md
+    format: yaml-frontmatter
+    fields: *article
+
+  - name: trophies_page
+    label: Trophies
+    type: file
+    path: content/trophies/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: description, label: Search engine description, type: text }
+      - { name: parent, type: string, hidden: true, default: /about }
+      - { name: intro, type: text }
+      - name: trophies
+        type: object
+        list: true
+        fields:
+          - { name: name, type: string }
+          - { name: since, label: Awarded since (year), type: number }
+          - { name: description, type: text }
+          - name: winners
+            label: Winners (newest first)
+            type: object
+            list: true
+            fields:
+              - { name: season, type: string, description: "e.g. 2024/25" }
+              - { name: recipient, label: Winner, type: string }
+              - { name: note, type: string }
+
   - name: aircraft_page
     label: Our aircraft page
     type: file

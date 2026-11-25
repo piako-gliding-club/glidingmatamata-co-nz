@@ -38,6 +38,7 @@ good_to_know:
   - Gliders aren't available for full-day use without prior arrangement. Twin flights are usually 1–2 hours.
   - Basic accommodation is available on-site via the [Matamata Soaring Centre ↗](https://msc.gliding.co.nz/accommodation) — plan to arrive on a flying day, or organise a key in advance.
   - Public transport to the airfield is limited — we recommend hiring a car.
+  - "Looking for a local challenge? Try our [club tasks](/club-tasks/): set cross-country courses from Matamata, with task boards in the clubrooms."
 nearby_clubs:
   - text: Auckland Aviation Sports Club, Whenuapai ↗
     url: http://www.ascgliding.org/

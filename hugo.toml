@@ -35,10 +35,25 @@ enableRobotsTXT = true
   parent = "about"
   weight = 25
 [[menus.main]]
+  name = "About gliding"
+  pageRef = "/about-gliding"
+  parent = "about"
+  weight = 27
+[[menus.main]]
   name = "Our aircraft"
   pageRef = "/aircraft"
   parent = "about"
   weight = 30
+[[menus.main]]
+  name = "Club tasks"
+  pageRef = "/club-tasks"
+  parent = "about"
+  weight = 32
+[[menus.main]]
+  name = "Trophies"
+  pageRef = "/trophies"
+  parent = "about"
+  weight = 34
 [[menus.main]]
   name = "Fly with us"
   pageRef = "/trial-flights"

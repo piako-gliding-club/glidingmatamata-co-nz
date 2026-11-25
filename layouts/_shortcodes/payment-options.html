@@ -8,11 +8,14 @@
       <span class="{{ $icon }}"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span>
       <span class="font-head font-bold text-xl text-navy">Bank transfer</span>
     </div>
-    <div>
-      {{- range slice (slice "account name" $s.bank_account_name "") (slice "account number" $s.bank_account_number "font-semibold text-navy") }}
-      <div class="{{ index . 2 }}">{{ index . 1 }}<button type="button" data-copy="{{ index . 1 }}" aria-label="Copy {{ index . 0 }}" title="Copy" class="ml-1 inline-flex align-middle -my-1 p-1.5 rounded-md text-label whitespace-nowrap hover:text-navy hover:bg-card-line">{{ $copy | safeHTML }}</button></div>
+    <dl class="my-3 space-y-4">
+      {{- range slice (slice "Account name" $s.bank_account_name) (slice "Account number" $s.bank_account_number) }}
+      <div>
+        <dt class="text-sm text-muted">{{ index . 0 }}</dt>
+        <dd class="font-semibold text-navy text-base">{{ index . 1 }}<button type="button" data-copy="{{ index . 1 }}" aria-label="Copy {{ lower (index . 0) }}" title="Copy" class="ml-1 inline-flex align-middle -my-1 p-1.5 rounded-md text-label whitespace-nowrap hover:text-navy hover:bg-card-line">{{ $copy | safeHTML }}</button></dd>
+      </div>
       {{- end }}
-    </div>
+    </dl>
     <div class="text-sm text-muted">Usually reaches us within 1 to 4 hours.</div>
   </div>
   <div class="card p-6 flex flex-col gap-2.5">

@@ -8,10 +8,24 @@
   {{- end }}
 </dl>
 <script>
+{{- /* navigator.clipboard only exists on https/localhost; the textarea fallback covers plain-http previews. */}}
+function copyText(text) {
+  if (navigator.clipboard) return navigator.clipboard.writeText(text);
+  const t = document.createElement('textarea');
+  t.value = text;
+  t.setAttribute('readonly', '');
+  t.style.position = 'fixed';
+  t.style.opacity = '0';
+  document.body.append(t);
+  t.select();
+  const ok = document.execCommand('copy');
+  t.remove();
+  return ok ? Promise.resolve() : Promise.reject();
+}
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-copy]');
   if (!b) return;
-  navigator.clipboard.writeText(b.dataset.copy).then(() => {
+  copyText(b.dataset.copy).then(() => {
     b.textContent = 'Copied ✓';
     setTimeout(() => { b.textContent = 'Copy'; }, 2000);
   });

@@ -14,9 +14,15 @@ perks:
 
 ### 1. Pay for the voucher
 
-**Bank transfer** to Piako Gliding Club, BNZ **02-0360-0025367-000**. Use the recipient's name as the reference.
+**Bank transfer**
 
-**PayPal** — [pay with PayPal ↗](https://www.paypal.com/) and add the recipient's name in the note.
+{{< bank-details >}}
+
+Use the recipient's name as the reference.
+
+**PayPal**
+
+[Pay with PayPal ↗](https://www.paypal.com/) and add the recipient's name in the note.
 
 ### 2. Tell us where to send it
 

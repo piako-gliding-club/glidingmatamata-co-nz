@@ -16,6 +16,8 @@ Shared links (membership application form, GNZ operational forms): each lives on
 
 Gift vouchers page: `{{< voucher-email >}}` in the text becomes the trial flights email address (from Site settings), as a link that starts an email with the subject and details filled in. Keep it as typed.
 
+`{{< bank-details >}}` shows the club bank account name and number from Site settings, each with a Copy button for people paying from their phone.
+
 Pages link to people by role, not name — e.g. `[Secretary](/contact/#secretary)` jumps to that card under **Key contacts** on the Contact page. The link is the role in lower case with hyphens for spaces (`#chief-flying-instructor`), so renaming a role (say "Tugmaster" to "Tow master") breaks links to it.
 
 ## Development

@@ -2,7 +2,8 @@
 {{- $copy := `<svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>` -}}
 {{- $icon := "flex-none size-10 rounded-xl bg-tint text-navy grid place-items-center" -}}
 <div class="mt-4 grid sm:grid-cols-2 gap-[18px] text-[15px]">
-  <div class="card p-6 flex flex-col gap-2.5">
+  <div class="card p-6 flex flex-col gap-2.5 !border-gold border-2 relative">
+    <span class="absolute -top-3 left-6 font-mono text-[11px] tracking-[0.14em] uppercase bg-gold text-deep px-2.5 py-1 rounded-full">Preferred</span>
     <div class="flex items-center gap-3">
       <span class="{{ $icon }}"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span>
       <span class="font-head font-bold text-xl text-navy">Bank transfer</span>
@@ -19,8 +20,17 @@
       <span class="{{ $icon }}"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span>
       <span class="font-head font-bold text-xl text-navy">PayPal</span>
     </div>
-    <div>Add the recipient's name in the note.</div>
-    <a href="{{ partial "url.html" "paypal" }}" target="_blank" rel="noopener" class="mt-auto self-start font-head font-semibold rounded-xl border-[1.5px] border-navy !text-navy !no-underline px-5 py-2.5 hover:bg-navy hover:!text-white">Pay with PayPal ↗</a>
+    <div>Pay by card through PayPal, then add the recipient's name in the note.</div>
+    <div class="mt-auto flex flex-col gap-2">
+      {{- range $f := hugo.Data.trial_flights.flights }}{{ with .paypal_button_id }}
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="{{ . }}">
+        <input type="hidden" name="currency_code" value="NZD">
+        <button type="submit" class="w-full flex justify-between gap-3 font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-4 py-2.5 hover:bg-navy hover:text-white"><span>{{ $f.name }}</span><span>${{ $f.price }} ↗</span></button>
+      </form>
+      {{- end }}{{ end }}
+    </div>
   </div>
 </div>
 <script>

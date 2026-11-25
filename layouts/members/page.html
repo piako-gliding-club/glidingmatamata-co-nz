@@ -3,6 +3,7 @@
   {{ with site.GetPage .Params.parent }}<div class="font-mono text-xs text-label"><a href="{{ .RelPermalink }}" class="hover:text-navy">{{ .Title }}</a> &nbsp;/&nbsp; {{ $.Title }}</div>{{ end }}
   <h1 class="mt-6 font-head font-bold text-[clamp(34px,5.4vw,56px)] leading-[1.05] tracking-[-0.02em] text-navy">{{ .Title }}</h1>
   {{ with .Params.intro }}<p class="mt-4 text-lg text-body prose-links">{{ . | markdownify }}</p>{{ end }}
+  {{ with .Content }}<div class="mt-2 text-body prose-links [&_h2]:mt-10 [&_h2]:font-head [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:text-navy [&_p]:mt-4 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_li+li]:mt-2 [&_strong]:text-navy">{{ . }}</div>{{ end }}
   {{- range .Params.groups }}
   <h2 class="mt-10 font-head font-bold text-2xl text-navy">{{ .title }}</h2>
   <ul class="mt-3 space-y-3">

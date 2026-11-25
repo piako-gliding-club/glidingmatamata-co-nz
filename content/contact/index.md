@@ -35,6 +35,12 @@ key_contacts:
     name: Will Verland
     phone: 022 103 5758
     email: secretary@glidingmatamata.co.nz
+  - role: CFI
+    name: Norman Duke
+    phone: 021 828 754
+    email: cfi@glidingmatamata.co.nz
+  - role: Tugmaster
+    name: Phil Rees
 address: 6393 State Highway 27, Waharoa. 9km north of Matamata town, about 40 minutes' drive from Hamilton.
 map_url: https://www.google.com/maps/search/?api=1&query=Matamata+Aerodrome+6393+State+Highway+27+Waharoa
 postal: |

@@ -2,12 +2,12 @@
 {{ partial "page-head.html" . }}
 {{ with .Params }}
 <div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
-  {{- range slice (dict "title" "Get help with" "people" .help) (dict "title" "Key contacts" "people" .key_contacts) }}
+  {{- range $group := slice (dict "title" "Get help with" "people" .help) (dict "title" "Key contacts" "people" .key_contacts) }}
   <section class="mt-12 md:mt-16">
     <h2 class="eyebrow mb-5">{{ .title }}</h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
       {{- range .people }}
-      <div class="card p-6 flex flex-col gap-1">
+      <div {{ if eq $group.title "Key contacts" }}id="{{ anchorize .role }}" {{ end }}class="card p-6 flex flex-col gap-1 scroll-mt-28 target:border-gold target:ring-2 target:ring-gold">
         <div class="font-head font-semibold text-lg text-navy">{{ .role }}</div>
         <div class="text-body">{{ .name }}</div>
         {{ with .phone }}<a href="tel:{{ replace . " " "" }}" class="mt-2 font-mono text-sm text-navy hover:text-gold">{{ . }}</a>{{ end }}

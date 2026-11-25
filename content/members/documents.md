@@ -7,7 +7,7 @@ groups:
   links:
   - title: How We Do Things
     description: The club's standard operating procedures
-    url: ''
+    url: https://drive.google.com/file/d/1M2ewDgWizKB7HvEPYSv4Pd2z4RP1ziD3/view?usp=drive_link
   - title: Duty pilot
     description: What the duty pilot does on the day, with checklist
     url: ''
@@ -15,7 +15,7 @@ groups:
   links:
   - title: Gridding procedures
     description: Where and how gliders are gridded
-    url: ''
+    url: /members/gridding/
   - title: Priorities for use of club gliders
     description: Who gets the club gliders, and in what order
     url: ''
@@ -59,7 +59,7 @@ groups:
   links:
   - title: Constitution
     description: Current club constitution and rules
-    url: /files/constitution.pdf
+    url: https://drive.google.com/file/d/1yVw7urcvOSS6Yp1L6OACfQYBzKWmyjnU/view?usp=drive_link
   - title: Privacy policy
     description: Draft — how the club handles members' information
     url: ''

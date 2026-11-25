@@ -12,6 +12,8 @@ Notices disappear by themselves the day after their "Show until" date.
 
 Forms and documents: paste the Google Drive sharing link into the link's URL field. Links left empty show "Link to come" instead of a broken link. Who can open a document is controlled by its Drive sharing settings — this site is public.
 
+Pages link to people by role, not name — e.g. `[secretary](/contact/#secretary)` jumps to that card under **Key contacts** on the Contact page. The link comes from the role's name, so renaming a role (say "Tugmaster" to "Tow master") breaks links to it.
+
 ## Development
 
 Needs Hugo extended (0.169+) and Node 24.

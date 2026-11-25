@@ -446,6 +446,17 @@ content:
               - { name: description, type: string }
               - { name: url, label: Link (Google Drive or page), type: string }
 
+  - name: gridding_page
+    label: Gridding procedures
+    type: file
+    path: content/members/gridding.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: parent, type: string, hidden: true, default: /members/documents }
+      - { name: intro, type: text }
+      - { name: body, label: Content, type: rich-text }
+
   - name: aircraft_page
     label: Our aircraft page
     type: file

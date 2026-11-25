@@ -70,6 +70,11 @@ enableRobotsTXT = true
   identifier = "members"
   weight = 110
 [[menus.main]]
+  name = "Being a member"
+  pageRef = "/members"
+  parent = "members"
+  weight = 115
+[[menus.main]]
   name = "Forms and documents"
   pageRef = "/members/documents"
   parent = "members"

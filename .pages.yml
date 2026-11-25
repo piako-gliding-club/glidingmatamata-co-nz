@@ -501,7 +501,7 @@ content:
               - { name: note, type: string }
 
   - name: aircraft_page
-    label: Our aircraft page
+    label: Club aircraft page
     type: file
     path: content/aircraft/_index.md
     format: yaml-frontmatter

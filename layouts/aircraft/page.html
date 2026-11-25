@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ with .Params }}
 <div class="max-w-[1000px] mx-auto px-5 md:px-16 pb-20">
-  <div class="pt-6 md:pt-8 font-mono text-xs text-label"><a href="{{ partial "url.html" "/aircraft/" }}" class="hover:text-navy">Our aircraft</a> &nbsp;/&nbsp; {{ .registration | default .model }}</div>
+  <div class="pt-6 md:pt-8 font-mono text-xs text-label"><a href="{{ partial "url.html" "/aircraft/" }}" class="hover:text-navy">Club aircraft</a> &nbsp;/&nbsp; {{ .registration | default .model }}</div>
 
   <section class="mt-6">
     <div class="eyebrow">{{ .category }}</div>

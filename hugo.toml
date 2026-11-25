@@ -40,7 +40,7 @@ enableRobotsTXT = true
   parent = "about"
   weight = 24
 [[menus.main]]
-  name = "Our aircraft"
+  name = "Club aircraft"
   pageRef = "/aircraft"
   parent = "about"
   weight = 26

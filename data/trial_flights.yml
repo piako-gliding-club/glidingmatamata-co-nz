@@ -3,7 +3,7 @@ flights:
     height: 2,000 ft
     price: 200
     duration: 10–20 minutes aloft
-    description: The classic introduction — time on the controls and a first taste of soaring flight.
+    description: A quick taste — time on the controls and a first feel for soaring flight.
     popular: false
   - name: Extended
     height: 3,000 ft

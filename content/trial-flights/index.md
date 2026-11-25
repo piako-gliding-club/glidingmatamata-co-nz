@@ -3,7 +3,7 @@ title: Trial flights
 description: Your first flight in a glider, with a qualified instructor at Matamata Aerodrome.
 heading: Your first flight in a glider
 intro: A trial flight is an introduction to the sport of gliding — a flight with a qualified instructor. The controls are offered, and the day is yours to enjoy.
-price_note: Every trial is a two-seat aerotow flight with a Gliding New Zealand–rated instructor, priced by the height you release from tow. Durations are approximate and depend on the day's weather. Maximum pilot weight 110 kg.
+price_note: Every trial flight is a two-seat aerotow flight with an experienced instructor, priced by the height you release from tow. Durations are approximate and depend on the day's weather. Maximum pilot weight 110 kg.
 included:
   - Temporary club membership
   - Three further flights available at club rates

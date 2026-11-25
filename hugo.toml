@@ -55,12 +55,6 @@ enableRobotsTXT = true
   parent = "about"
   weight = 30
 [[menus.main]]
-  name = "Fees & prices"
-  identifier = "about-fees"
-  pageRef = "/fees"
-  parent = "about"
-  weight = 31
-[[menus.main]]
   name = "Fly with us"
   pageRef = "/trial-flights"
   identifier = "fly"

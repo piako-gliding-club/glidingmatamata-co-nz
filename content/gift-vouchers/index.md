@@ -28,4 +28,8 @@ Prefer to pick it up in Hamilton? Just tell us in the email and we'll organise i
 
 ### 3. We post the voucher
 
-Once your payment arrives, we post the voucher or organise pick-up within 24 to 48 hours. The recipient books a flight online and brings the voucher on the day.
+Once your payment arrives, we post the voucher or organise pick-up within 24 to 48 hours.
+
+### 4. They book a flight
+
+The recipient [books a day online ↗](booking) that suits them, choosing *Gift Voucher Flight*, and brings the voucher on the day.

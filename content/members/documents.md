@@ -11,9 +11,6 @@ groups:
   - title: Constitution
     description: Current club constitution and rules
     url: https://drive.google.com/file/d/1yVw7urcvOSS6Yp1L6OACfQYBzKWmyjnU/view?usp=drive_link
-  - title: Privacy policy
-    description: Draft — how the club handles members' information
-    url: ''
 - title: Flying day procedures
   links:
   - title: Gridding procedures
@@ -39,6 +36,11 @@ groups:
   - title: Medical forms
     description: Medical declaration for solo flying
     url: ''
+- title: GNZ forms
+  links:
+  - title: GNZ operational forms
+    description: Ops forms from Gliding New Zealand
+    url: https://gliding.co.nz/pilots/pilot-resources/operational-forms/
 - title: Aircraft
   links:
   - title: Aircraft & manuals
@@ -53,7 +55,7 @@ groups:
   links:
   - title: Committee meeting minutes
     description: Monthly meetings, newest first
-    url: ''
+    url: https://drive.google.com/drive/folders/1lM-v3GWpzQN7bWnAvw1QMufJ_oFmcTea
   - title: AGM & SGM minutes
     description: Annual and special general meetings
     url: ''
@@ -66,39 +68,6 @@ groups:
   - title: Membership list
     description: Members only — contact details for current members
     url: https://piako.gliding.net.nz/members
-- title: Club
-  links:
-  - title: Club projects
-    description: Current and past projects, and how to get involved
-    url: ''
-  - title: Statistics
-    description: Flying hours, launches and other club records
-    url: ''
-- title: Shared material
-  links:
-  - title: Library
-    description: Books, study notes and reference material
-    url: ''
-  - title: Logo & graphics
-    description: The latest club logo and graphics for posters and kit
-    url: ''
-- title: Training resources
-  links:
-  - title: Ridge syllabus
-    description: Training for flying the Kaimai ridge
-    url: ''
-  - title: Situational awareness on the Kaimai ridge
-    description: Notes for ridge flying
-    url: ''
-  - title: Winch training
-    description: Notes for winch launching
-    url: ''
-  - title: Mandatory broadcast zone radio notes
-    description: Radio calls at Matamata
-    url: ''
-  - title: Oxygen training notes
-    description: Notes on flying with oxygen
-    url: ''
 - title: Handy links
   links:
   - title: WentFlying

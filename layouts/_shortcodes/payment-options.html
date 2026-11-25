@@ -8,7 +8,7 @@
       <span class="{{ $icon }}"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span>
       <span class="font-head font-bold text-xl text-navy">Bank transfer</span>
     </div>
-    <dl class="my-3 space-y-4">
+    <dl class="mb-3 space-y-4">
       {{- range slice (slice "Account name" $s.bank_account_name) (slice "Account number" $s.bank_account_number) }}
       <div>
         <dt class="text-sm text-muted">{{ index . 0 }}</dt>

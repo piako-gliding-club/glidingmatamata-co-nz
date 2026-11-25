@@ -30,6 +30,11 @@ enableRobotsTXT = true
   identifier = "about"
   weight = 20
 [[menus.main]]
+  name = "Our club"
+  pageRef = "/about"
+  parent = "about"
+  weight = 25
+[[menus.main]]
   name = "Our aircraft"
   pageRef = "/aircraft"
   parent = "about"

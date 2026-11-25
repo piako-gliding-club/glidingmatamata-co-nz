@@ -35,7 +35,7 @@ key_contacts:
     name: Will Verland
     phone: 022 103 5758
     email: secretary@glidingmatamata.co.nz
-  - role: CFI
+  - role: Chief Flying Instructor
     name: Norman Duke
     phone: 021 828 754
     email: cfi@glidingmatamata.co.nz

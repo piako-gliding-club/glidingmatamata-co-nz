@@ -457,6 +457,17 @@ content:
       - { name: intro, type: text }
       - { name: body, label: Content, type: rich-text }
 
+  - name: non_rostered_page
+    label: Flying on non-rostered club days
+    type: file
+    path: content/members/non-rostered-days.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, type: string }
+      - { name: parent, type: string, hidden: true, default: /members/documents }
+      - { name: intro, type: text }
+      - { name: body, label: Content, type: rich-text }
+
   - name: aircraft_page
     label: Our aircraft page
     type: file

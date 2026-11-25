@@ -6,16 +6,22 @@
   {{ with .Content }}<div class="mt-2 text-body prose-links [&_h2]:mt-10 [&_h2]:font-head [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:text-navy [&_p]:mt-4 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_li+li]:mt-2 [&_strong]:text-navy">{{ . }}</div>{{ end }}
   {{- range .Params.groups }}
   <h2 class="mt-10 font-head font-bold text-2xl text-navy">{{ .title }}</h2>
-  <ul class="mt-3 space-y-3">
+  <ul class="mt-3 card overflow-hidden divide-y divide-line">
     {{- range .links }}
     <li>
+      {{- $ext := hasPrefix .url "http" }}
+      {{- $row := "flex items-center justify-between gap-4 px-5 py-4" }}
       {{- if .url }}
-      <a href="{{ partial "url.html" .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="font-semibold text-navy underline underline-offset-4 hover:text-gold">{{ .title }}</a>
-      {{- if strings.Contains .url "drive.google" }} <span class="text-sm text-muted">(Google Drive)</span>{{ end }}
+      <a href="{{ partial "url.html" .url }}" {{ if $ext }}target="_blank" rel="noopener"{{ end }} class="{{ $row }} group hover:bg-[#f5f8fb]">
+        <span><span class="block font-semibold text-navy underline-offset-4 group-hover:underline">{{ .title }}</span>{{ with .description }}<span class="block text-[15px] text-muted">{{ . }}</span>{{ end }}</span>
+        <span class="flex-none text-sm font-semibold text-navy">{{ if strings.Contains .url "drive.google" }}Google Drive ↗{{ else if $ext }}Open ↗{{ else }}Read →{{ end }}</span>
+      </a>
       {{- else }}
-      <span class="font-semibold text-navy">{{ .title }}</span> <span class="text-sm text-muted">(link to come)</span>
+      <div class="{{ $row }}">
+        <span><span class="block font-semibold text-navy">{{ .title }}</span>{{ with .description }}<span class="block text-[15px] text-muted">{{ . }}</span>{{ end }}</span>
+        <span class="flex-none text-sm text-muted">Link to come</span>
+      </div>
       {{- end }}
-      {{ with .description }}<span class="block text-body">{{ . }}</span>{{ end }}
     </li>
     {{- end }}
   </ul>

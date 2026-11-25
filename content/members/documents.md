@@ -8,9 +8,6 @@ groups:
   - title: How We Do Things
     description: The club's standard operating procedures
     url: https://drive.google.com/file/d/1M2ewDgWizKB7HvEPYSv4Pd2z4RP1ziD3/view?usp=drive_link
-  - title: Duty pilot
-    description: What the duty pilot does on the day, with checklist
-    url: ''
 - title: Flying day procedures
   links:
   - title: Gridding procedures
@@ -21,13 +18,7 @@ groups:
     url: ''
   - title: Flying on non-rostered club days
     description: What to do when there is no roster
-    url: ''
-  - title: Checklist for away trips
-    description: Before you head off to another airfield or a camp
-    url: ''
-  - title: Mobile EFTPOS instructions
-    description: Taking payment at the field
-    url: ''
+    url: /members/non-rostered-days/
   - title: Start of Season Briefing notes
     description: Notes from the compulsory briefing
     url: ''

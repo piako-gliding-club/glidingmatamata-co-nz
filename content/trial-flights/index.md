@@ -43,10 +43,10 @@ faqs:
     answer: Absolutely. Family and friends are welcome to come along and watch from the launch point — it's part of the day.
 ---
 
-Turn up a bit before your booking if you can, and allow an hour or so for your flight, as there are sometimes delays. The actual flight length depends on the booking time.
+Turn up a bit before your booking if you can, and allow an hour or so for your flight. Gliding runs on the weather and delays are common, so we suggest keeping half a day free so you're not rushed or disappointed. How long you're in the air depends on which flight you booked.
 
-Look for our club caravan. It will be at one of 4 points on the airfield. It's OK to drive on the airfield to get to us: keep your hazard lights on, stick well to the side, and give way to all aircraft.
+Look for our club caravan. It will be at one of 4 points on the airfield. It's OK to drive on the airfield to get to us: keep your hazard lights on, stick well to the side, and give way to all aircraft, both on the ground and coming in to land.
 
 The club rooms have tea and coffee facilities and toilets. Food is available from Waharoa, about 5 minutes drive south of the field. The nearest ATM is in Matamata.
 
-If you have a friend or family member who may also want a flight, we can probably fit them in on the day.
+If a friend or family member would also like a flight, we may be able to fit them in on the day, but it's best to book them ahead so we can plan for it.

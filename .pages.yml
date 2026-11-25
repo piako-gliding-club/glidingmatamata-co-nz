@@ -52,6 +52,7 @@ content:
       - { name: gnz_ops_forms_url, label: GNZ operational forms link, description: "Link to it anywhere on the site with the address gnz-ops-forms", type: string, required: true }
       - { name: bank_account_name, label: Bank account name, type: string, required: true }
       - { name: bank_account_number, label: Bank account number, type: string, required: true }
+      - { name: paypal_url, label: PayPal payment link, description: "Link to it anywhere on the site with the address paypal", type: string, required: true }
 
   - name: aircraft
     label: Aircraft

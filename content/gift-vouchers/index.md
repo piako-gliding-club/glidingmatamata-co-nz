@@ -14,15 +14,9 @@ perks:
 
 ### 1. Pay for the voucher
 
-**Bank transfer**
+Pay one of two ways. Use the recipient's name as the reference.
 
-{{< bank-details >}}
-
-Use the recipient's name as the reference.
-
-**PayPal**
-
-[Pay with PayPal ↗](https://www.paypal.com/) and add the recipient's name in the note.
+{{< payment-options >}}
 
 ### 2. Tell us where to send it
 
@@ -36,4 +30,4 @@ Prefer to pick it up in Hamilton? Just tell us in the email and we'll organise i
 
 ### 3. We post the voucher
 
-Bank transfers usually reach us within 1 to 4 hours. Once your payment arrives, we post the voucher or organise pick-up within 24 to 48 hours. The recipient books a flight online and brings the voucher on the day.
+Once your payment arrives, we post the voucher or organise pick-up within 24 to 48 hours. The recipient books a flight online and brings the voucher on the day.

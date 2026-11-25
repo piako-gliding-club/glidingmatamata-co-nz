@@ -40,20 +40,26 @@ enableRobotsTXT = true
   parent = "about"
   weight = 24
 [[menus.main]]
-  name = "Club aircraft"
+  name = "Aircraft"
   pageRef = "/aircraft"
   parent = "about"
   weight = 26
 [[menus.main]]
-  name = "Club tasks"
+  name = "Tasks"
   pageRef = "/club-tasks"
   parent = "about"
   weight = 28
 [[menus.main]]
-  name = "Club trophies"
+  name = "Trophies"
   pageRef = "/trophies"
   parent = "about"
   weight = 30
+[[menus.main]]
+  name = "Fees & prices"
+  identifier = "about-fees"
+  pageRef = "/fees"
+  parent = "about"
+  weight = 31
 [[menus.main]]
   name = "Fly with us"
   pageRef = "/trial-flights"

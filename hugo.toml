@@ -35,11 +35,6 @@ enableRobotsTXT = true
   parent = "about"
   weight = 30
 [[menus.main]]
-  name = "Fees & prices"
-  pageRef = "/fees"
-  parent = "about"
-  weight = 40
-[[menus.main]]
   name = "Fly with us"
   pageRef = "/trial-flights"
   identifier = "fly"
@@ -75,25 +70,15 @@ enableRobotsTXT = true
   identifier = "members"
   weight = 110
 [[menus.main]]
-  name = "Being a member"
-  url = "/members/#being-a-member"
-  parent = "members"
-  weight = 115
-[[menus.main]]
-  name = "Forms and SoPs"
-  url = "/members/#forms-and-sops"
+  name = "Forms and documents"
+  pageRef = "/members/documents"
   parent = "members"
   weight = 120
 [[menus.main]]
-  name = "Committee & governance"
-  url = "/members/#committee"
+  name = "Fees & prices"
+  pageRef = "/fees"
   parent = "members"
   weight = 130
-[[menus.main]]
-  name = "Club resources"
-  url = "/members/#resources"
-  parent = "members"
-  weight = 140
 [[menus.main]]
   name = "Roster & bookings ↗"
   url = "https://glidingmatamata.co.nz/members/roster/"
@@ -115,14 +100,6 @@ enableRobotsTXT = true
 
 [security.exec]
   allow = ['^node$', '^tailwindcss$', '^git$']
-
-# Members sub-pages are sections of the single /members page, not pages of their own.
-[[cascade]]
-  [cascade.build]
-    render = "never"
-    list = "always"
-  [cascade.target]
-    path = "/members/*"
 
 [minify]
   disableXML = true

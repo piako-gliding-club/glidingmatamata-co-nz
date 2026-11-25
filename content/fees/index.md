@@ -1,7 +1,7 @@
 ---
 title: Fees & prices
 description: Membership fees and flying charges for Piako Gliding Club members.
-parent: /about
+parent: /members
 intro: These fees and prices are for club members. Members pay an annual membership fee + flying fees on days they fly. Trial flights and gift vouchers are on the [trial flights page](/trial-flights/).
 flying_note: Paid on the day by EFTPOS, cash, or bank transfer. Invoices available for groups by prior arrangement.
 flying_charges:

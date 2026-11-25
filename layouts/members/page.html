@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="max-w-[760px] mx-auto px-5 md:px-8 pt-6 md:pt-8 pb-24">
+  {{ with site.GetPage .Params.parent }}<div class="font-mono text-xs text-label"><a href="{{ .RelPermalink }}" class="hover:text-navy">{{ .Title }}</a> &nbsp;/&nbsp; {{ $.Title }}</div>{{ end }}
+  <h1 class="mt-6 font-head font-bold text-[clamp(34px,5.4vw,56px)] leading-[1.05] tracking-[-0.02em] text-navy">{{ .Title }}</h1>
+  {{ with .Params.intro }}<p class="mt-4 text-lg text-body prose-links">{{ . | markdownify }}</p>{{ end }}
+  {{- range .Params.groups }}
+  <h2 class="mt-10 font-head font-bold text-2xl text-navy">{{ .title }}</h2>
+  <ul class="mt-3 space-y-3">
+    {{- range .links }}
+    <li>
+      {{- if .url }}
+      <a href="{{ partial "url.html" .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="font-semibold text-navy underline underline-offset-4 hover:text-gold">{{ .title }}</a>
+      {{- if strings.Contains .url "drive.google" }} <span class="text-sm text-muted">(Google Drive)</span>{{ end }}
+      {{- else }}
+      <span class="font-semibold text-navy">{{ .title }}</span> <span class="text-sm text-muted">(link to come)</span>
+      {{- end }}
+      {{ with .description }}<span class="block text-body">{{ . }}</span>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>
+{{ end }}

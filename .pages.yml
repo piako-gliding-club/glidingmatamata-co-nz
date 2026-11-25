@@ -237,7 +237,7 @@ content:
     fields:
       - { name: title, type: string }
       - { name: description, label: Search engine description, type: text }
-      - { name: parent, type: string, hidden: true, default: /about }
+      - { name: parent, type: string, hidden: true, default: /members }
       - { name: intro, type: text }
       - { name: flying_note, type: text }
       - name: flying_charges
@@ -408,29 +408,30 @@ content:
       - { name: cta, label: Call to action, type: object, fields: *cta }
 
   - name: members_page
-    label: Members page
+    label: Members page (Being a member)
     type: file
     path: content/members/_index.md
     format: yaml-frontmatter
     fields:
-      - { name: title, type: string }
-      - { name: eyebrow, type: string }
+      - { name: title, label: Menu title, type: string }
+      - { name: heading, type: string }
       - { name: intro, type: text }
-      - { name: cta, label: Roster banner, type: object, fields: *cta }
+      - name: rows
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: title, type: string }
+          - { name: text, type: text }
 
-  - name: members_pages
-    label: Members document pages
-    type: collection
-    path: content/members
-    exclude: [_index.md]
-    view:
-      fields: [title]
-      sort: [weight]
+  - name: documents_page
+    label: Forms and documents
+    type: file
+    path: content/members/documents.md
+    format: yaml-frontmatter
     fields:
-      - { name: title, type: string, required: true }
-      - { name: weight, label: Order, type: number }
+      - { name: title, type: string }
       - { name: parent, type: string, hidden: true, default: /members }
-      - { name: eyebrow, type: string, hidden: true, default: Members }
       - { name: intro, type: text }
       - name: groups
         type: object
@@ -444,13 +445,6 @@ content:
               - { name: title, type: string }
               - { name: description, type: string }
               - { name: url, label: Link (Google Drive or page), type: string }
-      - name: rows
-        label: Text sections (instead of document links)
-        type: object
-        list: true
-        fields:
-          - { name: title, type: string }
-          - { name: text, type: text }
 
   - name: aircraft_page
     label: Our aircraft page

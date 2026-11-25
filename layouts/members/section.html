@@ -1,57 +1,10 @@
 {{ define "main" }}
-{{- $sections := .Pages.ByWeight -}}
-{{- $h3 := "mt-8 font-head font-bold text-xl text-navy" -}}
 <div class="max-w-[760px] mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-24">
-  <h1 class="font-head font-bold text-[clamp(34px,5.4vw,56px)] leading-[1.05] tracking-[-0.02em] text-navy">{{ .Title }}</h1>
+  <h1 class="font-head font-bold text-[clamp(34px,5.4vw,56px)] leading-[1.05] tracking-[-0.02em] text-navy">{{ .Params.heading | default .Title }}</h1>
   {{ with .Params.intro }}<p class="mt-4 text-lg text-body prose-links">{{ . | markdownify }}</p>{{ end }}
-
-  {{- with .Params.cta }}
-  <div class="mt-8 card p-6 flex flex-wrap gap-x-8 gap-y-4 items-center justify-between">
-    <div>
-      <h2 class="font-head font-bold text-2xl text-navy">{{ .title }}</h2>
-      {{ with .text }}<p class="mt-1 text-body">{{ . }}</p>{{ end }}
-    </div>
-    <a href="{{ partial "url.html" .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="btn-gold whitespace-nowrap">{{ .button }}</a>
-  </div>
-  {{- end }}
-
-  <nav class="mt-10" aria-label="On this page">
-    <h2 class="eyebrow">On this page</h2>
-    <ul class="mt-3 space-y-2 text-lg">
-      {{- range $sections }}
-      <li><a href="#{{ .File.ContentBaseName }}" class="font-semibold text-navy underline underline-offset-4 hover:text-gold">{{ .Title }}</a></li>
-      {{- end }}
-    </ul>
-  </nav>
-
-  {{- range $sections }}
-  <section id="{{ .File.ContentBaseName }}" class="mt-16 pt-8 border-t-2 border-gold scroll-mt-28">
-    <h2 class="font-head font-bold text-[clamp(28px,3.6vw,36px)] leading-tight tracking-[-0.02em] text-navy">{{ .Title }}</h2>
-    {{ with .Params.intro }}<p class="mt-3 text-lg text-body prose-links">{{ . | markdownify }}</p>{{ end }}
-
-    {{- range .Params.rows }}
-    <h3 class="{{ $h3 }}">{{ .title }}</h3>
-    <div class="mt-2 text-body prose-links [&_p+p]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_li+li]:mt-1.5 [&_strong]:text-navy">{{ .text | markdownify }}</div>
-    {{- end }}
-
-    {{- range .Params.groups }}
-    <h3 class="{{ $h3 }}">{{ .title }}</h3>
-    <ul class="mt-2 space-y-3">
-      {{- range .links }}
-      <li>
-        {{- if .url }}
-        <a href="{{ partial "url.html" .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="font-semibold text-navy underline underline-offset-4 hover:text-gold">{{ .title }}</a>
-        {{- if strings.Contains .url "drive.google" }} <span class="text-sm text-muted">(Google Drive)</span>{{ end }}
-        {{- else }}
-        <span class="font-semibold text-navy">{{ .title }}</span> <span class="text-sm text-muted">(link to come)</span>
-        {{- end }}
-        {{ with .description }}<span class="block text-body">{{ . }}</span>{{ end }}
-      </li>
-      {{- end }}
-    </ul>
-    {{- end }}
-    <p class="mt-8 text-sm"><a href="#top" class="text-muted underline underline-offset-4 hover:text-navy">Back to top ↑</a></p>
-  </section>
+  {{- range .Params.rows }}
+  <h2 class="mt-10 font-head font-bold text-2xl text-navy">{{ .title }}</h2>
+  <div class="mt-2 text-body prose-links [&_p+p]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_li+li]:mt-1.5 [&_strong]:text-navy">{{ .text | markdownify }}</div>
   {{- end }}
 </div>
 {{ end }}

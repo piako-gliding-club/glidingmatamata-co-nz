@@ -431,7 +431,6 @@ content:
       - { name: weight, label: Order, type: number }
       - { name: parent, type: string, hidden: true, default: /members }
       - { name: eyebrow, type: string, hidden: true, default: Members }
-      - { name: summary, label: Summary on the Members page, type: string }
       - { name: intro, type: text }
       - name: groups
         type: object

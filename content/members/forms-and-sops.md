@@ -3,7 +3,6 @@ title: Forms and SoPs
 weight: 2
 parent: /members
 eyebrow: Members
-summary: How we run a flying day, and the paperwork that goes with it.
 intro: How we run a flying day. Read the procedures before your first duty, and keep the forms handy.
 groups:
 - title: Procedures

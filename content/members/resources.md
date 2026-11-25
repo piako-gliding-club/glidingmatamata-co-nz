@@ -3,7 +3,6 @@ title: Club resources
 weight: 4
 parent: /members
 eyebrow: Members
-summary: Projects, records and shared material.
 intro: Projects, records and shared material for members.
 groups:
 - title: Club

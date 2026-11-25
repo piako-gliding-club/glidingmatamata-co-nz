@@ -3,11 +3,10 @@ title: Being a member
 weight: 1
 parent: /members
 eyebrow: Members
-summary: What the club expects of every member, and what to do when you can't make a rostered day.
 intro: The club is run entirely by volunteers, so it only works if everyone does their share. Here's what you've signed up for.
 rows:
 - title: Know how we do things
-  text: Every member needs to be familiar with [How We Do Things](/members/forms-and-sops/), our standard operating procedures, and [our Constitution](/files/constitution.pdf), the rules the club runs by.
+  text: Every member needs to be familiar with [How We Do Things](/members/#forms-and-sops), our standard operating procedures, and [our Constitution](/files/constitution.pdf), the rules the club runs by.
 - title: Duty pilot
   text: |-
     Unless you're on the instructor or tow pilot roster, being Duty Pilot is a condition of membership. It comes around once every few months and isn't onerous. The role is described in How We Do Things.

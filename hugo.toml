@@ -76,22 +76,22 @@ enableRobotsTXT = true
   weight = 110
 [[menus.main]]
   name = "Being a member"
-  pageRef = "/members/being-a-member"
+  url = "/members/#being-a-member"
   parent = "members"
   weight = 115
 [[menus.main]]
   name = "Forms and SoPs"
-  pageRef = "/members/forms-and-sops"
+  url = "/members/#forms-and-sops"
   parent = "members"
   weight = 120
 [[menus.main]]
   name = "Committee & governance"
-  pageRef = "/members/committee"
+  url = "/members/#committee"
   parent = "members"
   weight = 130
 [[menus.main]]
   name = "Club resources"
-  pageRef = "/members/resources"
+  url = "/members/#resources"
   parent = "members"
   weight = 140
 [[menus.main]]
@@ -115,6 +115,14 @@ enableRobotsTXT = true
 
 [security.exec]
   allow = ['^node$', '^tailwindcss$', '^git$']
+
+# Members sub-pages are sections of the single /members page, not pages of their own.
+[[cascade]]
+  [cascade.build]
+    render = "never"
+    list = "always"
+  [cascade.target]
+    path = "/members/*"
 
 [minify]
   disableXML = true

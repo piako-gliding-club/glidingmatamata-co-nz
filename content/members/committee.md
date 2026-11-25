@@ -3,7 +3,6 @@ title: Committee & governance
 weight: 3
 parent: /members
 eyebrow: Members
-summary: Minutes, roles and the rules the club runs by.
 intro: Meeting records, committee roles and club policies.
 groups:
 - title: Meetings

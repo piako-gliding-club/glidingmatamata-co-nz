@@ -30,3 +30,7 @@ If it fails with "isn't installed", the App needs installing on the org (with ac
 - Run `npm run build` before pushing; it must finish with no warnings.
 - Check UI changes in a browser at phone (390px) and desktop widths.
 - Things editors change through the CMS must stay in `.pages.yml`: any new front-matter field or data file needs a matching entry, or the CMS may drop it on save.
+- Don't repeat anything that goes out of date. If a link, price, person or fact appears on more than one page, keep it in one place and point at it:
+  - Shared links live in `data/settings.yml` as `<name>_url` (with a `.pages.yml` field). Use the bare name with hyphens as the URL anywhere (`[form](membership-application)`, a front-matter `url:`); `layouts/_partials/url.html` resolves it, and an unknown name fails the build.
+  - Roles link to their Contact card (`/contact/#secretary`) rather than naming the person.
+  - Prices link to `/fees/` rather than being restated.

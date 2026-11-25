@@ -1,3 +1,9 @@
+{{- /* A bare name like "membership-application" is a shared link from Site settings (membership_application_url). */ -}}
+{{- $u := . }}
+{{- if and $u (not (findRE `[/:#.?]` $u)) }}
+  {{- $key := printf "%s_url" (replace $u "-" "_") }}
+  {{- $u = index hugo.Data.settings $key | default "" }}
+  {{- if not $u }}{{ errorf "Unknown shared link %q: add %s to data/settings.yml" . $key }}{{ end }}
+{{- end }}
 {{- /* relURL leaves "/x" untouched, which breaks under a sub-path baseURL like user.github.io/repo/. */ -}}
-{{- $u := . }}{{ if eq $u "membership-application" }}{{ $u = hugo.Data.settings.membership_application_url }}{{ end -}}
 {{- return (strings.TrimPrefix "/" $u | relURL) -}}

@@ -34,7 +34,7 @@ faqs:
   - question: Is there a weight or age limit?
     answer: Our gliders have a seat limit of 110kg. There is no minimum weight in the two-seat gliders. Gliding is suitable for ages 8 to 85 — getting in a glider is a bit like getting in the bath.
   - question: Do I need a medical?
-    answer: There are no medical requirements for flying with an instructor. Solo flight requires a medical declaration from your GP which is no more stringent than the requirements for a driver's licence.
+    answer: "There are no medical requirements for flying with an instructor. Solo flight requires a medical declaration from your GP which is no more stringent than the requirements for a driver's licence. If you're thinking of taking up gliding, you can see the medical form among the [Gliding New Zealand operational forms ↗](gnz-ops-forms)."
   - question: What should I wear or bring?
     answer: Flat shoes, sunglasses, a hat and a light jacket — plus sunscreen in summer. We provide everything else you'll need in the glider.
   - question: How long will the visit take?

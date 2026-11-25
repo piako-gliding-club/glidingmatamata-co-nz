@@ -48,7 +48,7 @@ groups:
   links:
   - title: GNZ operational forms
     description: Ops forms from Gliding New Zealand
-    url: https://gliding.co.nz/pilots/pilot-resources/operational-forms/
+    url: gnz-ops-forms
 - title: Aircraft
   links:
   - title: Aircraft & manuals

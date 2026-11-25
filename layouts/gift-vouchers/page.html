@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $body := "Flight (Basic / Extended / Mile High):\n\nRecipient's name:\n\nMessage for the card (optional):\n\nPostal address (or 'Hamilton pick-up'):\n\nPaid by (bank transfer / PayPal):\n" -}}
+{{- $body := "Flight (Basic / Extended / Mile High):\n\nWho it's for:\n\nPostal address (or 'Hamilton pick-up'):\n\nPaid by (bank transfer / PayPal):\n" -}}
 {{- $mail := printf "mailto:%s?subject=%s&body=%s" hugo.Data.settings.flights_email ("Gift voucher order" | urlquery) ($body | urlquery) | replaceRE `\+` "%20" -}}
 {{ with .Params }}
 <div class="max-w-[1100px] mx-auto px-5 md:px-16">

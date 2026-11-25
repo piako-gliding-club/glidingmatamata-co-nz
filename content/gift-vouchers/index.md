@@ -20,8 +20,8 @@ perks:
 
 ### 2. Tell us where to send it
 
-Email us the flight you chose, who it's for, any message for the card, and the postal address. The button below starts the email for you. Prefer to pick it up in Hamilton? Say so in the email.
+Email us the flight you chose, who it's for, and the postal address. The button below starts the email for you. Prefer to pick it up in Hamilton? Say so in the email.
 
 ### 3. We post the voucher
 
-Once the payment arrives (usually 1–2 working days) we post the voucher within 24 to 48 hours. The recipient books a flight online and brings the voucher on the day.
+Bank transfers usually reach us within 1 to 4 hours. Once your payment arrives, we post the voucher or organise pick-up within 24 to 48 hours. The recipient books a flight online and brings the voucher on the day.

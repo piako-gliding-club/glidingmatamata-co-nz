@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="max-w-[760px] mx-auto px-5 md:px-8 pt-6 md:pt-8 pb-24">
-  {{ with site.GetPage .Params.parent }}<div class="font-mono text-xs text-label"><a href="{{ .RelPermalink }}" class="hover:text-navy">{{ .Title }}</a> &nbsp;/&nbsp; {{ $.Title }}</div>{{ end }}
+  {{ with .Params.parent }}{{ with site.GetPage . }}<div class="font-mono text-xs text-label"><a href="{{ .RelPermalink }}" class="hover:text-navy">{{ .Title }}</a> &nbsp;/&nbsp; {{ $.Title }}</div>{{ end }}{{ end }}
   <h1 class="mt-6 font-head font-bold text-[clamp(34px,5.4vw,56px)] leading-[1.05] tracking-[-0.02em] text-navy">{{ .Title }}</h1>
   {{ with .Params.intro }}<p class="mt-4 text-lg text-body prose-links">{{ . | markdownify }}</p>{{ end }}
 
@@ -30,5 +30,6 @@
     {{- end }}
   </section>
   {{- end }}
+  {{ partial "next.html" . }}
 </div>
 {{ end }}

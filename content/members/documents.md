@@ -37,7 +37,7 @@ groups:
   links:
   - title: Membership application
     description: Join or renew
-    url: https://glidingmatamata.co.nz/about/joining_our_club/555.file
+    url: membership-application
   - title: Time sheets & landout slips
     description: For logging flights and reporting landouts
     url: ''

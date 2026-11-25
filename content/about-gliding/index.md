@@ -1,7 +1,6 @@
 ---
 title: About gliding
 description: How gliders stay up, how far and fast they fly, and what gliding is like at Matamata.
-parent: /about
 intro: Gliding is an amazing sport and hobby, suitable for young and old. Almost anyone can learn to fly, and our training provides all the equipment and instruction you need to get started.
 ---
 Gliders depend on the weather. They need either a strong windy day or a hot sunny day. We tend to avoid rainy days, or still days with no sun.

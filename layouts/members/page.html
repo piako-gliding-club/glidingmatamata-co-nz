@@ -9,12 +9,12 @@
   <ul class="mt-3 card overflow-hidden divide-y divide-line">
     {{- range .links }}
     <li>
-      {{- $ext := hasPrefix .url "http" }}
+      {{- $href := partial "url.html" .url }}{{ $ext := hasPrefix $href "http" }}
       {{- $row := "flex items-center justify-between gap-4 px-5 py-4" }}
       {{- if .url }}
-      <a href="{{ partial "url.html" .url }}" {{ if $ext }}target="_blank" rel="noopener"{{ end }} class="{{ $row }} group hover:bg-[#f5f8fb]">
+      <a href="{{ $href }}" {{ if $ext }}target="_blank" rel="noopener"{{ end }} class="{{ $row }} group hover:bg-[#f5f8fb]">
         <span><span class="block font-semibold text-navy underline-offset-4 group-hover:underline">{{ .title }}</span>{{ with .description }}<span class="block text-[15px] text-muted">{{ . }}</span>{{ end }}</span>
-        <span class="flex-none text-sm font-semibold text-navy">{{ if strings.Contains .url "drive.google" }}Google Drive ↗{{ else if $ext }}Open ↗{{ else }}Read →{{ end }}</span>
+        <span class="flex-none text-sm font-semibold text-navy">{{ if strings.Contains $href "drive.google" }}Google Drive ↗{{ else if $ext }}Open ↗{{ else }}Read →{{ end }}</span>
       </a>
       {{- else }}
       <div class="{{ $row }}">

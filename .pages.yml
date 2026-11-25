@@ -48,6 +48,7 @@ content:
     fields:
       - { name: booking_url, label: Booking site URL, type: string, required: true }
       - { name: flights_email, label: Trial flights email, type: string, required: true }
+      - { name: membership_application_url, label: Membership application form link, description: "Anywhere on the site, a link to membership-application goes here.", type: string, required: true }
 
   - name: aircraft
     label: Aircraft
@@ -199,7 +200,7 @@ content:
           - { name: url, type: string }
 
   - name: about_page
-    label: About page
+    label: Our club page
     type: file
     path: content/about/index.md
     format: yaml-frontmatter
@@ -211,23 +212,11 @@ content:
       - { name: intro, type: text }
       - { name: hero_image, label: Header photo, type: image }
       - { name: mission, type: text }
-      - { name: pillars_intro, type: string }
-      - { name: pillars, type: string, list: true }
-      - { name: history_year, type: string }
-      - { name: history_caption, type: string }
       - { name: history, label: Our history, type: rich-text, options: { format: markdown } }
       - { name: when_we_fly, label: When we fly, type: rich-text, options: { format: markdown } }
       - { name: joining_lead, type: string }
       - { name: joining, label: Joining the club, type: rich-text, options: { format: markdown } }
       - { name: joining_steps, type: text, list: true }
-      - { name: application_url, label: Membership application link, type: string }
-      - name: more
-        label: More about the club links
-        type: object
-        list: true
-        fields:
-          - { name: text, type: string }
-          - { name: url, type: string }
 
   - name: fees_page
     label: Fees & prices page
@@ -476,7 +465,6 @@ content:
     fields: &article
       - { name: title, type: string }
       - { name: description, label: Search engine description, type: text }
-      - { name: parent, type: string, hidden: true, default: /about }
       - { name: intro, type: text }
       - { name: body, label: Content, type: rich-text }
 
@@ -495,7 +483,6 @@ content:
     fields:
       - { name: title, type: string }
       - { name: description, label: Search engine description, type: text }
-      - { name: parent, type: string, hidden: true, default: /about }
       - { name: intro, type: text }
       - name: trophies
         type: object
@@ -520,5 +507,4 @@ content:
     format: yaml-frontmatter
     fields:
       - { name: title, type: string }
-      - { name: parent, type: string, hidden: true, default: /about }
       - { name: intro, type: text }

@@ -1,2 +1,3 @@
 {{- /* relURL leaves "/x" untouched, which breaks under a sub-path baseURL like user.github.io/repo/. */ -}}
-{{- return (strings.TrimPrefix "/" . | relURL) -}}
+{{- $u := . }}{{ if eq $u "membership-application" }}{{ $u = hugo.Data.settings.membership_application_url }}{{ end -}}
+{{- return (strings.TrimPrefix "/" $u | relURL) -}}

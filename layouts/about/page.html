@@ -3,28 +3,18 @@
 {{ with .Params }}
 {{- $h2 := "font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy" -}}
 <div class="max-w-[1100px] mx-auto px-5 md:px-16 pb-20">
-  <section class="mt-12 md:mt-16 grid md:grid-cols-2 gap-10 items-start">
-    <div>
-      <div class="eyebrow mb-3">Our mission</div>
-      <p class="font-head font-semibold text-[clamp(22px,2.6vw,28px)] leading-snug text-navy">{{ .mission }}</p>
-    </div>
-    <div class="card p-7">
-      <p class="text-body">{{ .pillars_intro }}</p>
-      <ul class="mt-4 grid grid-cols-2 gap-3">
-        {{- range .pillars }}<li class="rounded-xl bg-tint px-4 py-3 font-head font-semibold text-navy">{{ . }}</li>{{ end }}
-      </ul>
-    </div>
+  <section class="mt-12 md:mt-16 max-w-[760px]">
+    <div class="eyebrow mb-3">Our mission</div>
+    <p class="font-head font-semibold text-[clamp(22px,2.6vw,28px)] leading-snug text-navy">{{ .mission }}</p>
   </section>
 
-  <section class="mt-16 md:mt-20 grid md:grid-cols-3 gap-10 items-start">
+  <section class="mt-16 md:mt-20 grid md:grid-cols-2 gap-10 items-start">
     <div>
-      <div class="font-head font-bold text-[clamp(64px,9vw,112px)] leading-none tracking-[-0.04em] text-gold">{{ .history_year }}</div>
-      <div class="mt-2 font-mono text-xs text-label">{{ .history_caption }}</div>
-    </div>
-    <div class="md:col-span-2">
       <h2 class="{{ $h2 }}">Our history</h2>
       <div class="mt-4 space-y-3 text-body">{{ .history | markdownify }}</div>
-      <h2 class="{{ $h2 }} mt-12">When we fly</h2>
+    </div>
+    <div>
+      <h2 class="{{ $h2 }}">When we fly</h2>
       <div class="mt-4 space-y-3 text-body">{{ .when_we_fly | markdownify }}</div>
     </div>
   </section>
@@ -43,19 +33,12 @@
       </ol>
       <div class="mt-6 flex flex-col gap-3">
         <a href="{{ partial "url.html" "/trial-flights/" }}" class="btn-gold text-center">Book a trial flight →</a>
-        <a href="{{ .application_url }}" target="_blank" rel="noopener" class="text-center font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-6 py-3 hover:bg-navy hover:text-white">Membership application (PDF) ↗</a>
+        <a href="{{ partial "url.html" "membership-application" }}" target="_blank" rel="noopener" class="text-center font-head font-semibold rounded-xl border-[1.5px] border-navy text-navy px-6 py-3 hover:bg-navy hover:text-white">Membership application ↗</a>
       </div>
     </div>
   </section>
 
-  <section class="mt-16 md:mt-20">
-    <div class="eyebrow mb-4">More about the club</div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-[18px]">
-      {{- range .more }}
-      <a href="{{ partial "url.html" .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }} class="card card-hover p-6 font-head font-semibold text-xl text-navy">{{ .text }}</a>
-      {{- end }}
-    </div>
-  </section>
+  {{ partial "next.html" $ }}
 </div>
 {{ end }}
 {{ end }}

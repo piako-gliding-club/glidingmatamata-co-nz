@@ -1,7 +1,6 @@
 ---
-title: Club tasks
+title: Our club tasks
 description: Piako Gliding Club's cross-country tasks, how to fly and submit them, and the trophies they're flown for.
-parent: /about
 intro: Our club tasks are set courses you can fly any time during the season, and several of them decide a club trophy. The task season ends on 31 July each year.
 ---
 ## Proving Grounds tasks

@@ -1,7 +1,6 @@
 ---
-title: Trophies
+title: Our club trophies
 description: Piako Gliding Club trophies, what each is awarded for, and every past winner.
-parent: /about
 intro: The club awards its trophies each year. Here is what each one is for, and everyone who has won it. Several are won by flying one of our [club tasks](/club-tasks/).
 trophies:
 - name: President's Pot

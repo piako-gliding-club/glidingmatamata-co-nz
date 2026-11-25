@@ -12,6 +12,8 @@ Notices disappear by themselves the day after their "Show until" date.
 
 Forms and documents: paste the Google Drive sharing link into the link's URL field. Links left empty show "Link to come" instead of a broken link. Who can open a document is controlled by its Drive sharing settings — this site is public.
 
+Membership application form: its link lives once in **Site settings**. Anywhere else (a document row, a link in page text) use `membership-application` as the URL and it points at whatever Site settings says.
+
 Pages link to people by role, not name — e.g. `[Secretary](/contact/#secretary)` jumps to that card under **Key contacts** on the Contact page. The link is the role in lower case with hyphens for spaces (`#chief-flying-instructor`), so renaming a role (say "Tugmaster" to "Tow master") breaks links to it.
 
 ## Development

@@ -20,7 +20,13 @@ perks:
 
 ### 2. Tell us where to send it
 
-Email us the flight you chose, who it's for, and the postal address. The button below starts the email for you. Prefer to pick it up in Hamilton? Say so in the email.
+Email us at {{< voucher-email >}} with:
+
+- the flight you paid for
+- who it's for
+- the postal address
+
+Prefer to pick it up in Hamilton? Just tell us in the email and we'll organise it.
 
 ### 3. We post the voucher
 

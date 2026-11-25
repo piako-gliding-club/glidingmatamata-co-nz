@@ -1,6 +1,4 @@
 {{ define "main" }}
-{{- $body := "Flight (Basic / Extended / Mile High):\n\nWho it's for:\n\nPostal address (or 'Hamilton pick-up'):\n\nPaid by (bank transfer / PayPal):\n" -}}
-{{- $mail := printf "mailto:%s?subject=%s&body=%s" hugo.Data.settings.flights_email ("Gift voucher order" | urlquery) ($body | urlquery) | replaceRE `\+` "%20" -}}
 {{ with .Params }}
 <div class="max-w-[1100px] mx-auto px-5 md:px-16">
   <div class="pt-6 md:pt-8 font-mono text-xs text-label"><a href="{{ partial "url.html" "/trial-flights/" }}" class="hover:text-navy">Trial flights</a> &nbsp;/&nbsp; Gift vouchers</div>
@@ -24,9 +22,8 @@
 
   <section class="mt-16 md:mt-20 pb-20 max-w-[760px]">
     <h2 class="font-head font-bold text-[clamp(26px,3.6vw,40px)] tracking-[-0.02em] text-navy mb-2">How to buy</h2>
-    <div class="text-body prose-links [&_h3]:font-head [&_h3]:font-semibold [&_h3]:text-xl [&_h3]:text-navy [&_h3]:mt-8 [&_h3]:mb-2 [&_p]:mt-3 [&_strong]:text-navy">{{ $.Content }}</div>
-    <a href="{{ $mail | safeURL }}" class="btn-gold mt-8">Email us your voucher details</a>
-    <p class="mt-4 text-sm text-muted">Or write to <a href="mailto:{{ hugo.Data.settings.flights_email }}" class="text-navy font-semibold underline underline-offset-4">{{ hugo.Data.settings.flights_email }}</a>. Flying yourself? <a href="{{ hugo.Data.settings.booking_url }}" target="_blank" rel="noopener" class="text-navy font-semibold underline underline-offset-4">Just book and pay on the day ↗</a></p>
+    <div class="text-body prose-links [&_h3]:font-head [&_h3]:font-semibold [&_h3]:text-xl [&_h3]:text-navy [&_h3]:mt-8 [&_h3]:mb-2 [&_p]:mt-3 [&_ul]:mt-3 [&_ul]:pl-5 [&_ul]:list-disc [&_li+li]:mt-1 [&_strong]:text-navy">{{ $.Content }}</div>
+    <p class="mt-8 text-sm text-muted">Flying yourself? <a href="{{ hugo.Data.settings.booking_url }}" target="_blank" rel="noopener" class="text-navy font-semibold underline underline-offset-4">Just book and pay on the day ↗</a></p>
   </section>
 </div>
 {{ end }}

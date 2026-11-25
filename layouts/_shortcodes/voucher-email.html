@@ -1,0 +1,5 @@
+{{- $to := hugo.Data.settings.flights_email -}}
+{{- $body := "The flight you paid for:\n\nWho it's for:\n\nPostal address (or Hamilton pick-up):\n" -}}
+{{- $href := printf "mailto:%s?subject=%s&body=%s" $to ("Gift voucher order" | urlquery) ($body | urlquery) | replaceRE `\+` "%20" -}}
+<a href="{{ $href | safeURL }}">{{ $to }}</a>
+{{- /* chomp */ -}}

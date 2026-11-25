@@ -14,6 +14,8 @@ Forms and documents: paste the Google Drive sharing link into the link's URL fie
 
 Shared links (membership application form, GNZ operational forms): each lives once in **Site settings**. Anywhere else (a document row, a link in page text) use its short name as the URL, `membership-application` or `gnz-ops-forms`, and it points at whatever Site settings says. To add one, add a `<name>_url` field to Site settings.
 
+Gift vouchers page: `{{< voucher-email >}}` in the text becomes the trial flights email address (from Site settings), as a link that starts an email with the subject and details filled in. Keep it as typed.
+
 Pages link to people by role, not name — e.g. `[Secretary](/contact/#secretary)` jumps to that card under **Key contacts** on the Contact page. The link is the role in lower case with hyphens for spaces (`#chief-flying-instructor`), so renaming a role (say "Tugmaster" to "Tow master") breaks links to it.
 
 ## Development
